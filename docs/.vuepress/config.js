@@ -28,6 +28,14 @@ module.exports = {
           'basic/isEmptyobj.md',
           'basic/dataType.md',
         ]
+      },
+      {
+        title: '场景算法',
+        collapsable: false,
+        children: [
+          'advanced/listNode.md',
+          'advanced/treeNode.md'
+        ]
       }
     ]
   }

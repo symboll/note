@@ -2,5 +2,5 @@
 home: true
 heroImage: /leetcode.jpeg
 actionText: 开始学习 →
-actionLink: /Array/
+actionLink: /structure/basic/
 ---

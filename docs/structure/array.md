@@ -14,7 +14,6 @@ Array.prototype.sort()
 Array.prototype.reverse()
 Array.prototype.splice()
 
-
 Array.prototype.join()
 Array.prototype.slice()
 Array.prototype.concat()
@@ -46,10 +45,10 @@ Array.prototype.flatMap()       // es10
 
 ## Array.from()
 `Array.from() `方法可以从一个类数组对象（拥有 length 属性和若干索引属性的任意对象）或可迭代对象创建一个新的，浅拷贝的数组实例。
-
-```js{1}
+```js
 Array.from(arrayLike, mapFn, thisArg)
-
+```
+```js
 Array.from('foo');                                  // [ "f", "o", "o" ]
 Array.from(new Set(['foo', 'bar', 'baz']));         // [ "foo", "bar", "baz" ]
 Array.from(new Map([[1, 2], [2, 4], [4, 8]]));      // [[1, 2], [2, 4], [4, 8]]
@@ -72,6 +71,10 @@ range(1, 10, 2);                                    // [1, 3, 5, 7, 9]
 ## Array.isArray()
 `Array.isArray()`用于确定传递的值是否是一个 Array。 返回值: `Boolean`
 ```js
+Array.isArray(any)
+return Boolean
+```
+```js
 Array.isArray([]);                                  // true
 Array.isArray(new Array());                         // true
 Array.isArray(Array.prototype);                     // true
@@ -83,13 +86,16 @@ Array.isArray(Array.prototype);                     // true
 ## Array.of()
 `Array.of()`方法创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型。
 ```js
+Array.of(element0, element1, ..., elementN)
+```
+```js
 Array.of(1);                          // [1] 
 Array.of(1, 2, 3);                    // [1, 2, 3]
 Array.of(undefined);                  // [undefined]
 Array(1);                             // [ empty ]
 Array(1, 2, 3);                       // [1, 2, 3]
 ```
-兼容
+兼容性
 ```js
 if (!Array.of) {
   Array.of = function() {
