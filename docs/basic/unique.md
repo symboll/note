@@ -1,10 +1,13 @@
+### unique
 
+```js
 const unique = (arr) => {
   return new Set([...arr])
 }
+```
 
-
-const unique2 = (arr) => {
+```js
+const unique = (arr) => {
   const obj = {}
   return arr.filter(item => {
     return typeof item === 'object' && JSON.stringify(item) !== 'null' ?
@@ -19,8 +22,4 @@ const unique2 = (arr) => {
       )
   })
 }
-
-module.exports = {
-  unique,
-  unique2
-}
+```

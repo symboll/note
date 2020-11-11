@@ -1,0 +1,23 @@
+{
+  "name": "algorithm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "flatten.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/symboll/algorithm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/symboll/algorithm/issues"
+  },
+  "homepage": "https://github.com/symboll/algorithm#readme",
+  "devDependencies": {
+    "vuepress": "^1.7.1"
+  }
+}

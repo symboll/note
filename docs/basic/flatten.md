@@ -1,17 +1,25 @@
+### flatten
+
+```js
 const flatten = (arr, depth = Infinity) => {
   return arr.flat(depth)
 }
+```
 
-
-const flatten2 = (arr) => {
+```js
+const flatten = (arr) => {
   return [].concat(...arr.map(item => Array.isArray(item) ? flatten2(item): item))
 }
+```
 
-const flatten3 = (arr) => {
+```js
+const flatten = (arr) => {
   return arr.reduce((result, item) => result.concat(Array.isArray(item) ? flatten3(item): item), [])
 }
+```
 
-const flatten4 = (arr) => {
+```js
+const flatten = (arr) => {
   const stack = []
   while (arr.length) {
     const item = arr.pop()
@@ -23,12 +31,4 @@ const flatten4 = (arr) => {
   }
   return stack.reverse()
 }
-
-
-module.exports = {
-  flatten,
-  flatten2,
-  flatten3,
-  flatten4
-}
-
+```
