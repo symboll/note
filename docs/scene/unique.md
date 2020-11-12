@@ -1,5 +1,6 @@
-### unique
+# unique
 
+### 数组去重
 ```js
 const unique = (arr) => {
   return new Set([...arr])

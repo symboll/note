@@ -1,4 +1,4 @@
-### basic
+# Basic
 
 7大类基础数据类型
 #### String

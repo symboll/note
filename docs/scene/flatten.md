@@ -1,5 +1,5 @@
-### flatten
-
+# flatten
+### 数组扁平化
 ```js
 const flatten = (arr, depth = Infinity) => {
   return arr.flat(depth)
@@ -14,7 +14,8 @@ const flatten = (arr) => {
 
 ```js
 const flatten = (arr) => {
-  return arr.reduce((result, item) => result.concat(Array.isArray(item) ? flatten3(item): item), [])
+  return arr.reduce((result, item) => 
+    result.concat(Array.isArray(item) ? flatten3(item): item), [])
 }
 ```
 

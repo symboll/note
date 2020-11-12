@@ -1,4 +1,5 @@
-### dataType
+# dataType
+### 类型判断
 
 ```js
 const dataType = (any) => {
@@ -13,4 +14,16 @@ dataType(Math);                 // 'Math'
 dataType(undefined);            // 'Undefined'
 dataType(null);                 // 'Null'
 dataType(new Promise(()=> {}))  // "Promise"
+```
+
+```js
+Array.isArray(any)
+```
+
+```js
+typeof any
+```
+
+```js
+a instanceof A
 ```

@@ -2,21 +2,14 @@
   "name": "algorithm",
   "version": "1.0.0",
   "description": "",
-  "main": "",
+  "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/symboll/algorithm.git"
-  },
-  "author": "",
+  "keywords": [],
+  "author": "symbollee",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/symboll/algorithm/issues"
-  },
-  "homepage": "https://github.com/symboll/algorithm#readme",
   "devDependencies": {
     "vuepress": "^1.7.1"
   }

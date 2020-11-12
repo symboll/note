@@ -1,5 +1,4 @@
-## Array
-
+# Array
 
 ```js
 Array.from()                    
@@ -13,6 +12,8 @@ Array.prototype.shift()
 Array.prototype.sort()
 Array.prototype.reverse()
 Array.prototype.splice()
+Array.prototype.copyWithin()    
+Array.prototype.fill()   
 
 Array.prototype.join()
 Array.prototype.slice()
@@ -34,13 +35,9 @@ Array.prototype.findIndex()
 Array.prototype.entries()       
 Array.prototype.values()        
 Array.prototype.keys()          
-
-
-Array.prototype.copyWithin()    // es6
-Array.prototype.fill()          // es6
-Array.prototype.includes()      // es7
-Array.prototype.flat()          // es10
-Array.prototype.flatMap()       // es10
+Array.prototype.includes() 
+Array.prototype.flat()          
+Array.prototype.flatMap()       
 ```
 
 ## Array.from()

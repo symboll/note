@@ -23,18 +23,21 @@ module.exports = {
         title: '基础算法',
         collapsable: false,
         children: [
-          'basic/flatten.md',
-          'basic/unique.md',
-          'basic/isEmptyobj.md',
-          'basic/dataType.md',
+          'basic/search.md',
+          'basic/recursion.md',
+          'basic/listNode.md',
+          'basic/treeNode.md',
+          
         ]
       },
       {
         title: '场景算法',
         collapsable: false,
         children: [
-          'advanced/listNode.md',
-          'advanced/treeNode.md'
+          'scene/dataType.md',
+          'scene/flatten.md',
+          'scene/unique.md',
+          'scene/isEmptyobj.md',
         ]
       }
     ]
