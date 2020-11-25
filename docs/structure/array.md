@@ -68,8 +68,7 @@ range(1, 10, 2);                                    // [1, 3, 5, 7, 9]
 ## Array.isArray()
 `Array.isArray()`用于确定传递的值是否是一个 Array。 返回值: `Boolean`
 ```js
-Array.isArray(any)
-return Boolean
+Array.isArray(any)                                // Boolean
 ```
 ```js
 Array.isArray([]);                                  // true
@@ -88,7 +87,7 @@ Array.of(element0, element1, ..., elementN)
 ```js
 Array.of(1);                          // [1] 
 Array.of(1, 2, 3);                    // [1, 2, 3]
-Array.of(undefined);                  // [undefined]
+Array.of(undefined);                   // [undefined]
 Array(1);                             // [ empty ]
 Array(1, 2, 3);                       // [1, 2, 3]
 ```
@@ -99,4 +98,67 @@ if (!Array.of) {
     return Array.prototype.slice.call(arguments);
   };
 }
+```
+## 操作（原数组）方法
+#### push, pop, unshift, shift
+```js
+const arr = [1,2,3,4]
+arr.push('a','b','d')         // 在数组尾部添加元素，返回数组长度。 (对原数组操作)
+// 7 
+// arr [1,2,3,4,'a','b','d']
+arr.pop()                     // 删除数组最后一个元素， 返回被删除的元素。
+// 'd'
+// arr [1,2,3,4,'a','b']
+arr.unshift('a','b','c')      // 在数组头部添加元素，返回数组长度。
+// 9
+// arr ['a','b','c',1,2,3,4,'a','b']
+arr.shift()                   // 删除数组第一个元素， 返回被删除的元素。
+// 'a'
+// arr ['b','c',1,2,3,4,'a','b']
+```
+#### sort 
+`sort()` 方法用`原地算法 (in-place algorithm)`对数组的元素进行排序，并返回数组。默认排序顺序是在将元素转换为字符串，然后比较它们的UTF-16代码单元值序列时构建的
+::: tip
+由于它取决于具体实现，因此无法保证排序的时间和空间复杂性。
+:::
+```js
+const arr =  [11, 2,'5',7, 5, 34]
+arr.sort()                  // [11, 2, 34, "5", 5, 7] 
+arr.sort((a,b) => a-b)      // [2, "5", 5, 7, 11, 34]
+arr.sort((a,b) => b-a)      // [34, 11, 7, "5", 5, 2]
+```
+#### reverse
+#### splice
+#### copyWithin
+#### fill
+
+## 访问方法
+#### join
+```js
+```
+#### slice
+#### concat
+#### toString
+#### toLocaleString
+## 遍历方法
+
+```js
+const arr = [1,2,3,4,5]
+arr.forEach((current,index,array) => { console.log(current) }) 
+// 与 map() 或者 reduce() 不同的是，它总是返回 undefined 值，不可链式调用。
+// 不会改变原数组，也就是调用它的数组（尽管 callback 函数在被调用时可能会改变原数组）。
+// 除了抛出异常以外，没有办法中止或跳出 forEach() 循环。
+// 若需要提前终止循环，你可以使用：every(), some(), find(), findIndex()
+
+// 关于链式调用 解释
+arr.filter(f => f > 2).map(i => i * 2)   // [6, 8, 10]  
+
+// 无法跳出循环体 解释
+arr.forEach(item => {
+  if(item > 3) {
+    console.log('我还在forEach循环体中')
+    return
+  }
+  console.log(item)
+})        // 1,2,3,'我还在forEach循环体中','我还在forEach循环体中'
 ```
