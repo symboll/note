@@ -27,7 +27,7 @@ module.exports = {
           'basic/recursion.md',
           'basic/listNode.md',
           'basic/treeNode.md',
-          
+          'basic/currying.md',
         ]
       },
       {
