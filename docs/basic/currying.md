@@ -36,7 +36,7 @@ function add () {
   if(arg.length === 0) {
     let res = add.arr.reduce((a, b) => a+b , 0)
     add.arr = []
-    return add
+    return res
   }else {
     add.arr = add.arr.concat(arg)
     return add
