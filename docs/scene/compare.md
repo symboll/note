@@ -3,49 +3,58 @@
 ### 版本号比较
 
 ```js
-function compare (newVersion, oldVersion) {
+function compare(newVersion, oldVersion) {
 
   const newArr = newVersion.split('.')
   const oldArr = oldVersion.split('.')
   const allNumberPattern = /^\d+$/
-  const allStrPattern = /^[a-zA-Z]+$/
   const len = Math.max(newArr.length, oldArr.length)
   let i = 0
-  
-  while(i< len) {
-    if(allNumberPattern.test(newArr[i]) && allNumberPattern.test(oldArr[i])) {
-      if(Number(newArr[i]) > Number(oldArr[i])) {
+
+  while (i < len) {
+    if (allNumberPattern.test(newArr[i]) && allNumberPattern.test(oldArr[i])) {
+      if (Number(newArr[i]) > Number(oldArr[i])) {
         return true
-      }else if(Number(newArr[i]) < Number(oldArr[i])) {
+      } else if (Number(newArr[i]) < Number(oldArr[i])) {
         return false
-      }else {
-        i ++
+      } else {
+        i++
       }
-    }else if(allStrPattern.test(newArr[i]) && allStrPattern.test(oldArr[i])) {
-      if(newArr[i] === oldArr[i]) { 
-        i ++ 
-      }else if([newArr[i], oldArr[i]].sort()[1] === newArr[i]) {
+    } else if (isAllString(newArr[i]) && isAllString(oldArr[i])) {
+      if (newArr[i] === oldArr[i]) {
+        i++
+      } else if ([newArr[i], oldArr[i]].sort()[1] === newArr[i]) {
         return true
-      }else {
+      } else {
         return false
       }
-    }else {
+    } else if (newArr[i] === undefined || oldArr[i] === undefined) {
+      if (newArr[i] === undefined) {
+        return false
+      } else {
+        return true
+      }
+    } else {
       let flag = compare(
-        compilerStrAndNumToArr(newArr[i]).join('.'), 
+        compilerStrAndNumToArr(newArr[i]).join('.'),
         compilerStrAndNumToArr(oldArr[i]).join('.')
       )
-      if(flag === undefined) {
+      if (flag === undefined) {
         i++
-      }else {
+      } else {
         return flag
       }
     }
   }
-
 }
 
 function isString (letter) {
   return typeof letter === 'string' && isNaN(letter)
+}
+
+function isAllString (str) {
+  const allStrPattern = /^[a-zA-Z]+$/
+  return allStrPattern.test(str) && isString(str)
 }
 
 function compilerStrAndNumToArr (str) {

@@ -38,7 +38,8 @@ module.exports = {
         collapsable: false,
         children: [
           'scene/currying.md',
-          'scene/compare.md'
+          'scene/compare.md',
+          'scene/copy.md'
         ]
       }
     ]
