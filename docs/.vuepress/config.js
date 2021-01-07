@@ -23,21 +23,22 @@ module.exports = {
         title: '基础算法',
         collapsable: false,
         children: [
-          'basic/search.md',
-          'basic/recursion.md',
+          'basic/dataType.md',
+          'basic/isEmptyobj.md',
+          'basic/flatten.md',
+          'basic/unique.md',
           'basic/listNode.md',
           'basic/treeNode.md',
-          'basic/currying.md',
+          'basic/recursion.md',
+          'basic/search.md',
         ]
       },
       {
         title: '场景算法',
         collapsable: false,
         children: [
-          'scene/dataType.md',
-          'scene/flatten.md',
-          'scene/unique.md',
-          'scene/isEmptyobj.md',
+          'scene/currying.md',
+          'scene/compare.md'
         ]
       }
     ]

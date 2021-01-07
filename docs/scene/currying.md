@@ -1,4 +1,4 @@
-# Currying
+# currying
 
 ### 科里化
 
