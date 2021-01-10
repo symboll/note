@@ -31,6 +31,7 @@ module.exports = {
           'basic/treeNode.md',
           'basic/recursion.md',
           'basic/search.md',
+          'basic/debounce.md',
         ]
       },
       {

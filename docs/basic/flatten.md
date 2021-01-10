@@ -8,14 +8,14 @@ const flatten = (arr, depth = Infinity) => {
 
 ```js
 const flatten = (arr) => {
-  return [].concat(...arr.map(item => Array.isArray(item) ? flatten2(item): item))
+  return [].concat(...arr.map(item => Array.isArray(item) ? flatten(item): item))
 }
 ```
 
 ```js
 const flatten = (arr) => {
   return arr.reduce((result, item) => 
-    result.concat(Array.isArray(item) ? flatten3(item): item), [])
+    result.concat(Array.isArray(item) ? flatten(item): item), [])
 }
 ```
 
