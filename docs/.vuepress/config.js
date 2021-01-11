@@ -40,7 +40,7 @@ module.exports = {
         children: [
           'scene/currying.md',
           'scene/compare.md',
-          'scene/copy.md'
+          'scene/deepClone.md'
         ]
       }
     ]
