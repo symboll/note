@@ -8,10 +8,10 @@ const dataType = (any) => {
 }
 
 dataType(new Array())           // 'Array'
-dataType(new Date);             // 'Date'
-dataType(new String);           // 'String'
+dataType(new Date());           // 'Date'
+dataType(new String());         // 'String'
 dataType(Math);                 // 'Math'
-dataType(undefined);            // 'Undefined'
+dataType(undefined);             // 'Undefined'
 dataType(null);                 // 'Null'
 dataType(new Promise(()=> {}))  // "Promise"
 ```

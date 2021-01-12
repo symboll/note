@@ -13,6 +13,7 @@ module.exports = {
         collapsable: false,
         children: [
           'structure/basic',
+          'structure/symbol',
           'structure/array',
           'structure/object',
           'structure/set',
@@ -40,7 +41,8 @@ module.exports = {
         children: [
           'scene/currying.md',
           'scene/compare.md',
-          'scene/deepClone.md'
+          'scene/deepClone.md',
+          'scene/combination.md'
         ]
       }
     ]

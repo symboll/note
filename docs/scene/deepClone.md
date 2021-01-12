@@ -3,34 +3,10 @@
 ### 深拷贝对象
 
 ```js
-let obj = {
-  num: 0,
-  str: '',
-  boolean: true,
-  unf: undefined,
-  nul: null,
-  obj: { name: '我是一个对象', id: 1 },
-  arr: [0, 1, 2],
-  func: function () { console.log('我是一个函数') },
-  date: new Date(0),
-  reg: new RegExp('/我是一个正则/ig'),
-  [Symbol('1')]: 1,
-  map: new Map([['a','b'], ['c', 'd']]),
-  set: new Set([1,2,{name: 'zhangsan'}]),
-};
-Object.defineProperty(obj, 'innumerable', {
-  enumerable: false, value: '不可枚举属性' }
-);
-obj = Object.create(obj, Object.getOwnPropertyDescriptors(obj))
-obj.loop = obj
-
-
-
 const dataType = (any) => {
   const toString = Object.prototype.toString
   return toString.call(any).slice(8, -1)
 }
-
 function deepClone (obj) {
   const o = {}
   Reflect.ownKeys(obj).map(item => {
