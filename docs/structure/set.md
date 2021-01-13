@@ -65,6 +65,5 @@ WeakSet.prototype.add(value)
 WeakSet.prototype.delete(value)
 WeakSet.prototype.has(value)
 ```
-::: tip
+
 WeakSet 的一个用处，是储存 DOM 节点，而不用担心这些节点从文档移除时，会引发内存泄漏。
-:::

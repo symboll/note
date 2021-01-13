@@ -30,7 +30,9 @@ Map.prototype.values()      // 返回键值的遍历器。
 Map.prototype.entries()     // 返回所有成员的遍历器。
 Map.prototype.forEach()     // 遍历 Map 的所有成员。
 ```
-
+::: tip
+`Map` 结构的默认遍历器接口（Symbol.iterator属性），就是entries方法。
+:::
 ```js
 map[Symbol.iterator] === map.entries   // true
 ```
