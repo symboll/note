@@ -1,6 +1,14 @@
 # Symbol
 
+```js
+const s1 = Symbol()
+const s2 = Symbol('s2')
+const s3 = Symbol.for('s')
+const s4 = Symbol.for('s')
+s3 === s4 // true
 
+Symbol.keyFor(s4)    // 's'
+```
 ### Symbol.hasInstance
 ```js
 class A {

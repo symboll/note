@@ -57,8 +57,8 @@ Set.prototype[Symbol.iterator] === Set.prototype.values    // true
 `WeakSet`结构与`Set`类似，也是不重复的值的集合。
 ```js
 // WeakSet 与 Set 有两个区别 
-1.WeakSet 的成员只能是对象，而不能是其他类型的值。
-2.WeakSet 中的对象都是弱引用，即垃圾回收机制不考虑 WeakSet 对该对象的引用。ES6 规定 WeakSet 不可遍历。
+1. WeakSet 的成员只能是对象，而不能是其他类型的值。
+2. WeakSet 中的对象都是弱引用，即垃圾回收机制不考虑 WeakSet 对该对象的引用。ES6 规定 WeakSet 不可遍历。
 
 WeakSet 结构三个方法。
 WeakSet.prototype.add(value) 
