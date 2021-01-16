@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /leetcode.jpeg
+heroImage: /cat.jpeg
 actionText: 开始学习 →
 actionLink: /structure/basic/
 ---

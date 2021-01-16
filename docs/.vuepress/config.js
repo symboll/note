@@ -18,6 +18,7 @@ module.exports = {
           'structure/object',
           'structure/set',
           'structure/map',
+          'structure/extends',
         ]
       },
       {
@@ -43,6 +44,13 @@ module.exports = {
           'scene/compare.md',
           'scene/deepClone.md',
           'scene/combination.md'
+        ]
+      },
+      {
+        title: 'react原理',
+        collapsable: false,
+        children: [
+          'react/redux.md'
         ]
       }
     ]

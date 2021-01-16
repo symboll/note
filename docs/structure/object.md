@@ -36,13 +36,13 @@ Object.prototype.toLocaleString()
 Object.prototype.toString()
 Object.prototype.valueOf()
 ```
-## Object.is
+### Object.is
 `Object.is()`方法判断两个值是否为同一个值。
 ```js
 Object.is(value1, value2)
 ```
 `返回值:` Boolean
-### Example
+#### Example
 ```js
 Object.is(window.NaN, NaN)   // true
 Object.is(NaN, 0/0);         // true
@@ -50,14 +50,14 @@ Object.is(NaN, 0/0);         // true
 Object.is(0, -0);            // false
 0 === -0                     // true
 ```
-### Object.is 与 == 运算不同。 
+#### Object.is 与 == 运算不同。 
 == 运算符在判断相等前对两边的变量(如果它们不是同一类型) 进行强制转换 (这种行为的结果会将 "" == false 判断为 true),
 而 Object.is不会强制转换两边的值。
 
-### Object.is 与 === 运算也不相同。
+#### Object.is 与 === 运算也不相同。
 === 运算符 (也包括 == 运算符) 将数字 -0 和 +0 视为相等 ，而将Number.NaN 与NaN视为不相等.
 
-## Object.create
+### Object.create
 `Object.create()`方法创建一个新对象，使用现有的对象来提供新创建的对象的__proto__。 
 ```js
 Object.create(proto,[propertiesObject])
@@ -70,7 +70,7 @@ Object.create(proto,[propertiesObject])
 如果propertiesObject参数是 null 或非原始包装对象，则抛出一个 TypeError 异常
 :::
 
-### Example
+#### Example
 ```js
 let obj = {};
 // 以字面量方式创建的空对象就相当于:
@@ -146,7 +146,7 @@ Child.prototype.run = function() {
 
 const child = new Child('zhangsan',18);
 ```
-## Object.assign
+### Object.assign
 `Object.assign()` 方法用于将所有可枚举属性的值从一个或多个源对象分配到目标对象。它将返回目标对象。
 ```js
 Object.assign(target, ...sources)
@@ -169,7 +169,7 @@ returnedTarget === target  // true
 ::: warning
 Object.assign 不会在那些source对象值为 null 或 undefined 的时候抛出错误。
 :::
-### Example
+#### Example
 #### String类型和 Symbol 类型的属性都会被拷贝。
 ```js
 const o1 = { a: 1 };
@@ -255,7 +255,7 @@ copy = completeAssign({}, obj);
 console.log(copy);
 // { foo:1, get bar() { return 2 } }
 ```
-## Object.defineProperty & Object.defineProperties
+### Object.defineProperty & Object.defineProperties
 |           | defineProperty      | defineProperties  |
 | --------: |:---------------------:| :---------------------:|
 |   定义     | 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象。 | 方法直接在一个对象上定义新的属性或修改现有属性，并返回该对象。 |
@@ -323,11 +323,11 @@ Object.defineProperty(obj, "key", {
   value: "static"
 });
 ```
-## Object.setPrototypeOf & Object.getPrototypeOf
-## Object.getOwnPropertyDescriptor & Object.getOwnPropertyDescriptors
-## Object.getOwnPropertyNames & Object.getOwnPropertySymbols
-## Object.seal & Object.isSealed
-## Object.preventExtensions & Object.isExtensible
-## Object.freeze & Object.isFrozen
-## Object.fromEntries
-## Object.keys & Object.values & Object.entries
+### Object.setPrototypeOf & Object.getPrototypeOf
+### Object.getOwnPropertyDescriptor & Object.getOwnPropertyDescriptors
+### Object.getOwnPropertyNames & Object.getOwnPropertySymbols
+### Object.seal & Object.isSealed
+### Object.preventExtensions & Object.isExtensible
+### Object.freeze & Object.isFrozen
+### Object.fromEntries
+### Object.keys & Object.values & Object.entries

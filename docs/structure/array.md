@@ -40,7 +40,7 @@ Array.prototype.flat()
 Array.prototype.flatMap()       
 ```
 
-## Array.from()
+### Array.from()
 `Array.from() `方法可以从一个类数组对象（拥有 length 属性和若干索引属性的任意对象）或可迭代对象创建一个新的，浅拷贝的数组实例。
 ```js
 Array.from(arrayLike, mapFn, thisArg)
@@ -65,7 +65,7 @@ range(0, 4, 1);                                     // [0, 1, 2, 3, 4]
 range(1, 10, 2);                                    // [1, 3, 5, 7, 9]
 ```
 
-## Array.isArray()
+### Array.isArray()
 `Array.isArray()`用于确定传递的值是否是一个 Array。 返回值: `Boolean`
 ```js
 Array.isArray(any)                                // Boolean
@@ -79,7 +79,7 @@ Array.isArray(Array.prototype);                     // true
 当检测Array实例时, Array.isArray 优于 instanceof,因为Array.isArray能检测iframes.
 :::
 
-## Array.of()
+### Array.of()
 `Array.of()`方法创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型。
 ```js
 Array.of(element0, element1, ..., elementN)
@@ -99,7 +99,7 @@ if (!Array.of) {
   };
 }
 ```
-## 操作（原数组）方法
+### 操作（原数组）方法
 #### push, pop, unshift, shift
 ```js
 const arr = [1,2,3,4]
@@ -132,7 +132,7 @@ arr.sort((a,b) => b-a)      // [34, 11, 7, "5", 5, 2]
 #### copyWithin
 #### fill
 
-## 访问方法
+### 访问方法
 #### join
 ```js
 ```
@@ -140,7 +140,7 @@ arr.sort((a,b) => b-a)      // [34, 11, 7, "5", 5, 2]
 #### concat
 #### toString
 #### toLocaleString
-## 遍历方法
+### 遍历方法
 
 ```js
 const arr = [1,2,3,4,5]
