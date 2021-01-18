@@ -1,16 +1,17 @@
 # combination
 ### 排列组合
 
+<img :src="$withBase('/combination.png')" alt="combination">
+
 ```js
+// n = 6, m = 2
 function combination (m, n) {
   let ans = 1;
-  for (let x = m - n + 1, y = 1; y <= n; x++, y++) {
-    ans = Math.floor(ans * x / y);
+  for (let x = n - m + 1, y = 1; y <= m; x++, y++) {
+    ans = ans * x / y;
   }
-  return ans;
+  return Math.round(ans);
 };
 
-
-// C 6, 2
-combination(6,2)  // 15
+combination(2, 6)  // 15
 ```

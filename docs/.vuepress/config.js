@@ -16,6 +16,7 @@ module.exports = {
           'structure/symbol',
           'structure/array',
           'structure/object',
+          'structure/math',
           'structure/set',
           'structure/map',
           'structure/extends',
@@ -51,6 +52,13 @@ module.exports = {
         collapsable: false,
         children: [
           'react/redux.md'
+        ]
+      },
+      {
+        title: 'koa原理',
+        collapsable: false,
+        children: [
+          'koa/koa.md'
         ]
       }
     ]
