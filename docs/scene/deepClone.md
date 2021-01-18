@@ -7,8 +7,19 @@ const dataType = (any) => {
   const toString = Object.prototype.toString
   return toString.call(any).slice(8, -1)
 }
+const funParmasArr = ["length", "name", "arguments", "caller", "prototype"]
+
 function deepClone (obj) {
   const o = {}
+
+  function deepArr(arr) {
+    const resArr = []
+    arr.map(item => {
+      resArr.push(dataType(item) === 'Array' ? deepArr(item):
+        dataType(item) === 'Object' ? deepClone(item): item)
+    })
+    return resArr
+  }
   Reflect.ownKeys(obj).map(item => {
     switch (dataType(obj[item])) {
       case 'Array': 
@@ -16,7 +27,11 @@ function deepClone (obj) {
         obj[item].forEach(i => {
           o[item].push(dataType(i) === 'Object' ? deepClone(i): i )
         })
-        // todoList: Multidimensional Array item is a object, how to do it ?
+        o[item].map((current,index) => {
+          if(Array.isArray(current)) {
+            o[item][index] = deepArr(current)
+          }
+        })
         break;
       case 'Object':
         if(obj === obj[item]) {
@@ -46,6 +61,9 @@ function deepClone (obj) {
         break;
       case 'Function':
         // todoList: how to copy a funnction ?
+      case 'Math':
+        o[item] = Math
+        break;
       case 'Number':
       case 'String':
       case 'Boolean':
@@ -56,6 +74,8 @@ function deepClone (obj) {
         const descriptor = Object.getOwnPropertyDescriptor(obj, item)
         Object.defineProperty(o,item, descriptor)
         break;
+      default: 
+        throw new Error(`${dataType(obj[item])} 不支持 deepClone`)
     }
   })
   return o
