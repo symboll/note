@@ -19,6 +19,7 @@ module.exports = {
           'structure/math',
           'structure/set',
           'structure/map',
+          'structure/regexp',
           'structure/extends',
         ]
       },
