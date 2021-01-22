@@ -161,4 +161,18 @@ arr.forEach(item => {
   }
   console.log(item)
 })        // 1,2,3,'我还在forEach循环体中','我还在forEach循环体中'
+
+
+// forEach, map 如何跳出循环体
+try {
+  arr.forEach(item => {
+    if(item >= 3) {
+      throw new Error('超出3了')
+    }
+  })
+}catch(e) {
+
+}
+
 ```
+
