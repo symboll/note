@@ -60,7 +60,7 @@ function deepClone (obj) {
         )
         break;
       case 'Function':
-        // todoList: how to copy a funnction ?
+        o[item] = eval(obj[item])
       case 'Math':
         o[item] = Math
         break;
