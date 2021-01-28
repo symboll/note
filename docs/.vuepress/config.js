@@ -20,7 +20,10 @@ module.exports = {
           'structure/set',
           'structure/map',
           'structure/regexp',
+          'structure/func',
+          'structure/class',
           'structure/extends',
+          
         ]
       },
       {
@@ -31,6 +34,7 @@ module.exports = {
           'basic/isEmptyobj.md',
           'basic/flatten.md',
           'basic/unique.md',
+          'basic/stack.md',
           'basic/listNode.md',
           'basic/treeNode.md',
           'basic/recursion.md',

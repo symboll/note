@@ -17,13 +17,14 @@ dataType(new Promise(()=> {}))  // "Promise"
 ```
 
 ```js
-Array.isArray(any)
+const arr = []
+Array.isArray(arr)
+arr instanceof Array
+arr.constructor === Array
+Object.getPrototypeOf(arr) === Array.prototype
+Array.prototype.isPrototypeOf(arr)
 ```
 
 ```js
 typeof any
-```
-
-```js
-a instanceof A
 ```
