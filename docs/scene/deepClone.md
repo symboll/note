@@ -61,6 +61,7 @@ function deepClone (obj) {
         break;
       case 'Function':
         o[item] = eval(obj[item])
+        break;
       case 'Math':
         o[item] = Math
         break;
