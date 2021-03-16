@@ -5,7 +5,6 @@
 ```js
 add(1)(2)(3)() = 6;
 ```
-
 ```js
 function curry () {
   let allArgs = [];

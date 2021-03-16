@@ -21,9 +21,7 @@ module.exports = {
           'structure/map',
           'structure/regexp',
           'structure/func',
-          'structure/class',
-          'structure/extends',
-          
+          'structure/class',          
         ]
       },
       {
@@ -49,21 +47,18 @@ module.exports = {
           'scene/currying.md',
           'scene/compare.md',
           'scene/deepClone.md',
-          'scene/combination.md'
+          'scene/combination.md',
+          'scene/permutation.md',
+          'scene/exchange.md',
+          'scene/circle.md',
         ]
       },
       {
-        title: 'react原理',
+        title: '源码',
         collapsable: false,
         children: [
-          'react/redux.md'
-        ]
-      },
-      {
-        title: 'koa原理',
-        collapsable: false,
-        children: [
-          'koa/koa.md'
+          'sourcecode/redux.md',
+          'sourcecode/koa.md'
         ]
       }
     ]
