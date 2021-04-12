@@ -13,6 +13,7 @@ module.exports = {
         collapsable: false,
         children: [
           'structure/basic',
+          'structure/string',
           'structure/symbol',
           'structure/array',
           'structure/object',
