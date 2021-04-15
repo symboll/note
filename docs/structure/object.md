@@ -1,5 +1,27 @@
 # Object
+## Interview
+### isEmptyObject [空对象判断]
+```js
+const isEmpty = obj => {
+  return Object.keys(obj).length > 0 ? true : false
+}
 
+const isEmpty = obj => {
+  return Reflect.ownKeys(obj).length > 0 ? true : false
+}
+
+const isEmpty = obj => {
+  return JSON.stringify(obj) === '{}' ? true: false
+}
+
+const isEmpty = obj => {
+  for(let key in obj) {
+    return false
+  }
+  return true
+}
+```
+## methods
 ```js
 Object.is()
 Object.create()

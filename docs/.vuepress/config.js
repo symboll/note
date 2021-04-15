@@ -1,7 +1,7 @@
 module.exports = {
   base: '',
   dest: './dist',
-  title: '数据结构与算法',
+  title: '前端笔记',
   description: '',
   themeConfig: {
     editLinks: false,
@@ -10,30 +10,26 @@ module.exports = {
     sidebar: [
       {
         title: '数据结构',
-        collapsable: false,
+        collapsable: true,
         children: [
-          'structure/basic',
-          'structure/string',
-          'structure/symbol',
-          'structure/array',
-          'structure/object',
-          'structure/math',
-          'structure/set',
-          'structure/map',
-          'structure/regexp',
-          'structure/func',
-          'structure/class',          
+          'structure/dataType.md',
+          'structure/string.md',
+          'structure/symbol.md',
+          'structure/object.md',
+          'structure/array.md',
+          'structure/math.md',
+          'structure/set.md',
+          'structure/map.md',
+          'structure/regexp.md',
+          'structure/func.md',
+          'structure/class.md',          
         ]
       },
       {
         title: '基础算法',
-        collapsable: false,
+        collapsable: true,
         children: [
-          'basic/dataType.md',
-          'basic/isEmptyobj.md',
-          'basic/flatten.md',
-          'basic/unique.md',
-          'basic/stack.md',
+          // 'basic/stack.md',
           'basic/listNode.md',
           'basic/treeNode.md',
           'basic/recursion.md',
@@ -43,7 +39,7 @@ module.exports = {
       },
       {
         title: '场景算法',
-        collapsable: false,
+        collapsable: true,
         children: [
           'scene/currying.md',
           'scene/compare.md',
@@ -55,8 +51,25 @@ module.exports = {
         ]
       },
       {
-        title: '源码',
-        collapsable: false,
+        title: '小程序',
+        collapsable: true,
+        children: [
+          'mini/app.md',
+          'mini/page.md',
+          'mini/component.md',
+        ]
+      },
+      {
+        title: 'git操作',
+        collapsable: true,
+        children: [
+          'gitnote/note.md',
+          'gitnote/interview.md'
+        ]
+      },
+      {
+        title: '源码分析',
+        collapsable: true,
         children: [
           'sourcecode/redux.md',
           'sourcecode/koa.md'

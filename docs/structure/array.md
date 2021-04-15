@@ -1,5 +1,44 @@
 # Array
+## Interview
+### flatten [数组扁平化]
+```js
+const flatten = (arr, depth = Infinity) => {
+  return arr.flat(depth)
+}
 
+const flatten = (arr) => {
+  return [].concat(...arr.map(item => Array.isArray(item) ? flatten(item): item))
+}
+
+const flatten = (arr) => {
+  return arr.reduce((result, item) => 
+    result.concat(Array.isArray(item) ? flatten(item): item), [])
+}
+```
+
+### unique [数组去重]
+```js
+const unique = (arr) => {
+  return new Set([...arr])
+}
+
+const unique = (arr) => {
+  const obj = {}
+  return arr.filter(item => {
+    return typeof item === 'object' && JSON.stringify(item) !== 'null' ?
+      ( obj.hasOwnProperty(Object.keys(item).sort().map(ele => `${ele}${item[ele]}`).join(''))?
+          false :
+          obj[Object.keys(item).sort().map(ele =>`${ele}${item[ele]}`).join('')] = true
+      ):
+      (
+        obj.hasOwnProperty(typeof item + item) ?
+        false: 
+        obj[typeof item + item] = true
+      )
+  })
+}
+```
+## methods
 ```js
 Array.from()                    
 Array.isArray()                 
