@@ -1,13 +1,13 @@
-# algorithm 
+# webnote 
 
-数据结构与算法
+前端笔记
 
 ## 启动电子书
 
 首先 clone 本项目：
 
 ```bash
-git clone git@github.com:symboll/algorithm.git
+git clone git@github.com:symboll/webnote.git
 ```
 
 进入 `algorithm` 目录后安装项目依赖：
