@@ -26,39 +26,39 @@ module.exports = {
         ]
       },
       {
-        title: '基础算法',
+        title: '算法',
         collapsable: true,
         children: [
-          // 'basic/stack.md',
-          'basic/listNode.md',
-          'basic/treeNode.md',
-          'basic/recursion.md',
-          'basic/search.md',
-          'basic/debounce.md',
+          'algorithm/debounce.md',
+          'algorithm/listNode.md',
+          'algorithm/circle.md',  
+          'algorithm/treeNode.md',
+          'algorithm/recursion.md',
+          'algorithm/search.md',
+          'algorithm/currying.md',
+          'algorithm/compare.md',
+          'algorithm/deepClone.md',
+          'algorithm/combination.md',
+          'algorithm/permutation.md',
+          'algorithm/exchange.md',
         ]
       },
       {
-        title: '场景算法',
+        title: "node",
         collapsable: true,
         children: [
-          'scene/currying.md',
-          'scene/compare.md',
-          'scene/deepClone.md',
-          'scene/combination.md',
-          'scene/permutation.md',
-          'scene/exchange.md',
-          'scene/circle.md',
+          'node/fs.md',
         ]
       },
-      {
-        title: '小程序',
-        collapsable: true,
-        children: [
-          'mini/app.md',
-          'mini/page.md',
-          'mini/component.md',
-        ]
-      },
+      // {
+      //   title: '小程序',
+      //   collapsable: true,
+      //   children: [
+      //     'mini/app.md',
+      //     'mini/page.md',
+      //     'mini/component.md',
+      //   ]
+      // },
       {
         title: 'git操作',
         collapsable: true,
