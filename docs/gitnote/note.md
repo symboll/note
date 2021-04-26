@@ -19,3 +19,9 @@ git reset --hard xxxxxxxxx{commit id}
 // 强推仓库代码回滚
 git push -f
 ```
+
+```js
+git rebase --continue   
+git rebase --skip
+git rebase --abort
+```

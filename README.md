@@ -7,10 +7,10 @@
 首先 clone 本项目：
 
 ```bash
-git clone git@github.com:symboll/webnote.git
+git clone git@github.com:symboll/note.git
 ```
 
-进入 `algorithm` 目录后安装项目依赖：
+进入 `note` 目录后安装项目依赖：
 
 ```bash
 npm install
