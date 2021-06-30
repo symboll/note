@@ -11,7 +11,7 @@ function debounce (fn, delay) {
     const ctx = this
 
     if(timer) {
-      clearSetTimerout(timer)
+      clearTimerout(timer)
     }else {
       timer = setTimeout(()=> {
         fn.apply(ctx, arg)

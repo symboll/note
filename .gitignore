@@ -2,3 +2,6 @@
 .DS_Store
 dist
 /test
+/docs/pamphlet
+/docs/interview
+/docs/style

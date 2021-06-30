@@ -1,6 +1,6 @@
 # String
 
-## Interview
+## interview
 ### replace
 ```js
 inpout  get-element-by-id

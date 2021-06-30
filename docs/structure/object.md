@@ -1,5 +1,5 @@
 # Object
-## Interview
+## interview
 ### isEmptyObject [空对象判断]
 ```js
 const isEmpty = obj => {
