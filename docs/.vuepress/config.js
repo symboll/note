@@ -9,20 +9,37 @@ module.exports = {
     nav: [],
     sidebar: [
       {
-        title: '数据结构',
+        title: '基本数据结构',
         collapsable: true,
         children: [
           'structure/dataType.md',
           'structure/string.md',
-          'structure/symbol.md',
+          'structure/other.md',
           'structure/object.md',
           'structure/array.md',
           'structure/math.md',
-          'structure/set.md',
-          'structure/map.md',
           'structure/regexp.md',
           'structure/func.md',
-          'structure/class.md',          
+        ]
+      },
+      {
+        title: 'ECMAscript6',
+        collapsable: true,
+        children: [
+          'es6/symbol.md',
+          'es6/promise.md',
+          'es6/set.md',
+          'es6/map.md',
+          'es6/class.md',
+        ]
+      },
+      {
+        title: '设计模式',
+        collapsable: true,
+        children: [
+          'design_pattern/singleton.md',
+          'design_pattern/eventEmitter.md',
+          'design_pattern/observable.md',
         ]
       },
       {
