@@ -3,20 +3,24 @@
 ## interview
 ### replace
 ```js
-inpout  get-element-by-id
-output  getElementById
+// inpout  get-element-by-id
+// output  getElementById
+
+function localeUpperCase (str) {
+  const pattern = /-[a-zA-Z]/g
+  return str.replace(pattern, (match) => match.slice(1).toLocaleUpperCase())
+}
 ```
 ```js
-function localeUpperCase (str) {
-  for(let i=0; i< str.length; i++) {
-    if(str[i]==='-') {
-      const pattern = new RegExp('-'+ str[i+1])
-      str = str.replace(pattern, str[i+1].toLocaleUpperCase())
-    }
-  }
-  return str
-}
+// input: abc123def456
+// output: 123abc456def
 
+function exchange (str) {
+  const pattern = /([a-zA-Z]+)([1-9]+)/g
+  return str.replace(pattern, (match, p1, p2) => {
+    return `${p2}${p1}`
+  })
+}
 ```
 ## methods
 ```js

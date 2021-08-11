@@ -17,9 +17,9 @@ module.exports = {
           'structure/other.md',
           'structure/object.md',
           'structure/array.md',
-          'structure/math.md',
           'structure/regexp.md',
           'structure/func.md',
+          'structure/math.md',
         ]
       },
       {
@@ -57,7 +57,6 @@ module.exports = {
           'algorithm/deepClone.md',
           'algorithm/combination.md',
           'algorithm/permutation.md',
-          'algorithm/exchange.md',
         ]
       },
       {
