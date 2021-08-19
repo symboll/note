@@ -52,12 +52,6 @@ const unique = (arr) => {
 }
 ```
 
-## important
-```js
-Array.prototype.join.call(arraylike)
-```
-
-
 ## methods
 ```js
 Array.from()                    
@@ -134,7 +128,7 @@ Array.isArray([]);                                  // true
 Array.isArray(new Array());                         // true
 Array.isArray(Array.prototype);                     // true
 ```
-::: tip
+::: tip 提示
 当检测Array实例时, Array.isArray 优于 instanceof,因为Array.isArray能检测iframes.
 :::
 
@@ -158,7 +152,7 @@ if (!Array.of) {
   };
 }
 ```
-### 操作（原数组）方法
+## 操作（原数组）方法
 ### push, pop, unshift, shift
 ```js
 const arr = [1,2,3,4]
@@ -177,7 +171,7 @@ arr.shift()                   // 删除数组第一个元素， 返回被删除�
 ```
 ### Array.prototype.sort() 
 `sort()` 方法用`原地算法 (in-place algorithm)`对数组的元素进行排序，并返回数组。默认排序顺序是在将元素转换为字符串，然后比较它们的UTF-16代码单元值序列时构建的
-::: tip
+::: tip 提示
 由于它取决于具体实现，因此无法保证排序的时间和空间复杂性。
 :::
 ```js
@@ -191,7 +185,7 @@ arr.sort((a,b) => b-a)      // [34, 11, 7, "5", 5, 2]
 ### Array.prototype.copyWithin()
 ### Array.prototype.fill()
 
-### 访问方法
+## 访问方法
 ### Array.prototype.join()
 `join()` 方法将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串。如果数组只有一个项目，那么将返回该项目而不使用分隔符。
 ```js
@@ -203,7 +197,7 @@ const arr = [1, 'a', true, undefined, null, 12n, { name: "zhangsan" }]
 const str = arr.join()   // str: "1,a,true,,,12,[object Object]"
 ```
 
-:::danger
+:::danger 重点
 如果一个元素为 undefined 或 null，则它会被转换为空字符串。
 如果一个元素为 Symboll 则会报错。
 :::
@@ -221,7 +215,25 @@ f(1, 'a', true);
 ### Array.prototype.concat()
 ### Array.prototype.toString()
 ### Array.prototype.toLocaleString()
-### 遍历方法
+
+## 遍历方法
+### Array.prototype.map()
+### Array.prototype.filter()
+### Array.prototype.forEach()
+### Array.prototype.reduce()
+### Array.prototype.reduceRight()
+### Array.prototype.every()
+### Array.prototype.some()
+### Array.prototype.indexOf()
+### Array.prototype.lastIndexOf()
+### Array.prototype.find()          
+### Array.prototype.findIndex()     
+### Array.prototype.entries()       
+### Array.prototype.values()        
+### Array.prototype.keys()          
+### Array.prototype.includes() 
+### Array.prototype.flat()          
+### Array.prototype.flatMap()   
 
 ```js
 const arr = [1,2,3,4,5]

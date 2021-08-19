@@ -88,7 +88,7 @@ Object.create(proto,[propertiesObject])
 `proto:` 新创建对象的原型对象。 </br>
 `propertiesObject:`  可选。需要传入一个对象，该对象的属性类型参照`Object.defineProperties()`的第二个参数。如果该参数被指定且不为`undefined`，该传入对象的自有可枚举属性(即其自身定义的属性，而不是其原型链上的枚举属性)将为新创建的对象添加指定的属性值和对应的属性描述符。 </br>
 `返回值: ` 一个新对象，带着指定的原型对象和属性。</br>
-::: danger
+::: danger 重点
 如果propertiesObject参数是 null 或非原始包装对象，则抛出一个 TypeError 异常
 :::
 
