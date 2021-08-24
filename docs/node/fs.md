@@ -11,10 +11,10 @@ fs.readdirSync(path.resolve(__dirname)).forEach(file => {
   let type = fileNameArr[fileNameArr.length -1 ]
   const oldName = fileNameArr.slice(0, fileNameArr.length-1).join('.')
 
-  const newName = oldName + 'a.' + type
+  const newName = oldName.replace('xxx', 'abc')
   fs.renameSync(
     path.resolve(__dirname)+'/'+ file, 
-    path.resolve(__dirname)+ '/' + newName
+    path.resolve(__dirname)+ '/' + newName + '.' + type
   )
 })
 ```

@@ -1,26 +1,27 @@
-# git 常用指令
+# git basic
 
 ### 创建版本库
-```js
+```Shell
 git clone <url>
 git init
 ```
 ### 修改和提交
-```js
+```Shell
 git status
 git diff
 git add .
 git commit -m 'feat: xxx'
 ```
 ### 查看提交历史
-```js
+```Shell
 git log
+q         // 退出
+
 git reset --hard xxxxxxxxx{commit id}
-// 强推仓库代码回滚
-git push -f
+git push -f   // 强推仓库代码回滚
 ```
 
-```js
+```Shell
 git rebase --continue   
 git rebase --skip
 git rebase --abort
