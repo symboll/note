@@ -51,7 +51,33 @@ const unique = (arr) => {
   })
 }
 ```
+### reduce 实现
+```js
+Array.prototype.myReduce = function (callback, initialValue) {
+  if(typeof callback !== 'function') { throw new Error('xxx') }
+  const arr = this
+  if(!initialValue){
+    initialValue = arr.shift()
+  }
+  let acc = initialValue
+  const length = arr.length
+  for(let i = 0; i < length; i++) {
+    acc = callback(acc, arr[i], i, arr)
+  }
+  return acc
+}
 
+//  test
+const arr = [1,2,3,4,5,6,7]
+const sum1 = arr.reduce((acc, cur, index, arr ) => {
+  return acc + cur
+}, 0)
+const sum2 = arr.myReduce((acc, cur, index, arr ) => {
+  return acc + cur
+}, 0)
+console.log('1',sum1)
+console.log('2',sum2)
+```
 ## methods
 ```js
 Array.from()                    
