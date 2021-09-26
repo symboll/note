@@ -7,7 +7,7 @@
 add(1)(2)(3)() = 6;
 ```
 ```js
-function curry () {
+function curry (fn) {
   let allArgs = [];
   return function next(){
     let args = [...arguments]
@@ -15,9 +15,9 @@ function curry () {
       allArgs = allArgs.concat(args);
       return next;
     }else{
-      let copyArgs = allArgs
+      const res = fn.apply(null, allArgs)
       allArgs = []
-      return fn.apply(null, copyArgs);
+      return res
     }
   } 
 }
