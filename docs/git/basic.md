@@ -26,3 +26,14 @@ git rebase --continue
 git rebase --skip
 git rebase --abort
 ```
+
+### 推分支名
+```Shell
+git checkout -b xxxxx
+git push --set-upstream origin xxxx
+```
+
+### 删除本地分支
+```Shell
+git branch -d xxxx
+```
