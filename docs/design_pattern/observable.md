@@ -1,4 +1,6 @@
-# observable 发布订阅模式
+# observable 
+
+发布订阅模式
 
 ```js
 class Observable {

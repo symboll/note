@@ -1,4 +1,6 @@
-# eventEmitter 观察者模式
+# eventEmitter 
+
+观察者模式
 
 ```js
 class eventEmitter {

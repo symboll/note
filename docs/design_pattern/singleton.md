@@ -1,4 +1,6 @@
-# singleton 单例模式
+# singleton 
+
+单例模式
 
 ### Eager  饿汉单例模式
 ```js

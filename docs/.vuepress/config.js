@@ -9,49 +9,40 @@ module.exports = {
     nav: [],
     sidebar: [
       {
-        title: '代办事项',
+        title: 'TodoList',
         collapsable: true,
         children: [
           'todolist/todolist.md',
         ]
       },
       {
-        title: '基本数据结构',
+        title: 'JavaScript Basic',
         collapsable: true,
         children: [
-          'structure/dataType.md',
-          'structure/string.md',
-          'structure/other.md',
-          'structure/object.md',
-          'structure/array.md',
-          'structure/regexp.md',
-          'structure/func.md',
-          'structure/math.md',
-          'structure/blob.md',
+          'javascript_basic/dataType.md',
+          'javascript_basic/string.md',
+          'javascript_basic/regexp.md',
+          'javascript_basic/object.md',
+          'javascript_basic/array.md',
+
+          'javascript_basic/func.md',
+          'javascript_basic/math.md',
+          'javascript_basic/date.md',
+          'javascript_basic/blob.md',
+          'javascript_basic/other.md',
+
+          'javascript_basic/symbol.md',
+          'javascript_basic/promise.md',
+          'javascript_basic/set.md',
+          'javascript_basic/map.md',
+          'javascript_basic/proxy.md',
+
+          'javascript_basic/reflect.md',
+          'javascript_basic/class.md',
         ]
       },
       {
-        title: 'ECMAscript6',
-        collapsable: true,
-        children: [
-          'es6/symbol.md',
-          'es6/promise.md',
-          'es6/set.md',
-          'es6/map.md',
-          'es6/class.md',
-        ]
-      },
-      {
-        title: '设计模式',
-        collapsable: true,
-        children: [
-          'design_pattern/singleton.md',
-          'design_pattern/eventEmitter.md',
-          'design_pattern/observable.md',
-        ]
-      },
-      {
-        title: '算法',
+        title: 'JavaScript Algorithm',
         collapsable: true,
         children: [
           'algorithm/debounce.md',
@@ -73,10 +64,21 @@ module.exports = {
         collapsable: true,
         children: [
           'dart/emulators.md',
-          'dart/basicType.md',
           'dart/operator.md',
+          'dart/list.md',
+          'dart/set.md',
+          'dart/map.md',
           'dart/function.md',
           'dart/oop.md',
+        ]
+      },
+      {
+        title: 'Design',
+        collapsable: true,
+        children: [
+          'design_pattern/singleton.md',
+          'design_pattern/eventEmitter.md',
+          'design_pattern/observable.md',
         ]
       },
       {
@@ -94,7 +96,7 @@ module.exports = {
         ]
       },
       {
-        title: '源码分析',
+        title: 'source',
         collapsable: true,
         children: [
           'sourcecode/redux.md',

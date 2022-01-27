@@ -1,7 +1,5 @@
-# function
+# Function
 
 ```dart
-void main () {
 
-}
 ```
