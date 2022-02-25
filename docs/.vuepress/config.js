@@ -42,21 +42,30 @@ module.exports = {
         ]
       },
       {
-        title: 'JavaScript Algorithm',
+        title: 'JavaScript Utils',
         collapsable: true,
         children: [
-          'algorithm/debounce.md',
-          'algorithm/listNode.md',
-          'algorithm/circle.md',  
-          'algorithm/treeNode.md',
-          'algorithm/recursion.md',
-          'algorithm/search.md',
-          'algorithm/currying.md',
-          'algorithm/compare.md',
-          'algorithm/deepClone.md',
-          'algorithm/combination.md',
-          'algorithm/permutation.md',
-          'algorithm/template.md',
+          'javascript_utils/debounce.md',
+          'javascript_utils/listNode.md',
+          'javascript_utils/circle.md',  
+          'javascript_utils/treeNode.md',
+          'javascript_utils/recursion.md',
+          'javascript_utils/search.md',
+          'javascript_utils/currying.md',
+          'javascript_utils/compare.md',
+          'javascript_utils/deepClone.md',
+          'javascript_utils/combination.md',
+          'javascript_utils/permutation.md',
+          'javascript_utils/template.md',
+        ]
+      },
+      {
+        title: 'JavaScript Design',
+        collapsable: true,
+        children: [
+          'javascript_design/singleton.md',
+          'javascript_design/eventEmitter.md',
+          'javascript_design/observable.md',
         ]
       },
       {
@@ -70,15 +79,6 @@ module.exports = {
           'dart/map.md',
           'dart/function.md',
           'dart/oop.md',
-        ]
-      },
-      {
-        title: 'Design',
-        collapsable: true,
-        children: [
-          'design_pattern/singleton.md',
-          'design_pattern/eventEmitter.md',
-          'design_pattern/observable.md',
         ]
       },
       {
@@ -101,6 +101,13 @@ module.exports = {
         children: [
           'sourcecode/redux.md',
           'sourcecode/koa.md'
+        ]
+      },
+      {
+        title: 'business_note',
+        collapsable: true,
+        children: [
+          'business_notes/commodity.md',
         ]
       }
     ]

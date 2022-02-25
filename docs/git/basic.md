@@ -37,3 +37,8 @@ git push --set-upstream origin xxxx
 ```Shell
 git branch -d xxxx
 ```
+
+### 查看远程地址
+```Shell
+git remote -v
+```
