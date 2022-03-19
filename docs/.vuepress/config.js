@@ -9,78 +9,80 @@ module.exports = {
     nav: [],
     sidebar: [
       {
-        title: 'TodoList',
+        title: 'Basic',
         collapsable: true,
         children: [
-          'todolist/todolist.md',
-        ]
-      },
-      {
-        title: 'JavaScript Basic',
-        collapsable: true,
-        children: [
-          'javascript_basic/dataType.md',
-          'javascript_basic/string.md',
-          'javascript_basic/regexp.md',
-          'javascript_basic/object.md',
-          'javascript_basic/array.md',
+          'basic/dataType.md',
+          'basic/string.md',
+          'basic/regexp.md',
+          'basic/object.md',
+          'basic/array.md',
 
-          'javascript_basic/func.md',
-          'javascript_basic/math.md',
-          'javascript_basic/date.md',
-          'javascript_basic/blob.md',
-          'javascript_basic/other.md',
+          'basic/listNode.md',
 
-          'javascript_basic/symbol.md',
-          'javascript_basic/promise.md',
-          'javascript_basic/set.md',
-          'javascript_basic/map.md',
-          'javascript_basic/proxy.md',
+          'basic/func.md',
+          'basic/math.md',
+          'basic/date.md',
+          'basic/blob.md',
+          'basic/other.md',
 
-          'javascript_basic/reflect.md',
-          'javascript_basic/class.md',
+          'basic/symbol.md',
+          'basic/promise.md',
+          'basic/set.md',
+          'basic/map.md',
+          'basic/proxy.md',
+
+          'basic/reflect.md',
+          'basic/class.md',
         ]
       },
       {
-        title: 'JavaScript Utils',
+        title: 'Utils',
         collapsable: true,
         children: [
-          'javascript_utils/debounce.md',
-          'javascript_utils/listNode.md',
-          'javascript_utils/circle.md',  
-          'javascript_utils/treeNode.md',
-          'javascript_utils/recursion.md',
-          'javascript_utils/search.md',
-          'javascript_utils/currying.md',
-          'javascript_utils/compare.md',
-          'javascript_utils/deepClone.md',
-          'javascript_utils/combination.md',
-          'javascript_utils/permutation.md',
-          'javascript_utils/template.md',
+          'utils/debounce.md',
+          'utils/deepClone.md',
+          'utils/currying.md',
         ]
       },
       {
-        title: 'JavaScript Design',
+        title: 'interview',
         collapsable: true,
         children: [
-          'javascript_design/singleton.md',
-          'javascript_design/eventEmitter.md',
-          'javascript_design/observable.md',
+          'interview/palindrome.md',
+          'interview/combination.md',
+          'interview/permutation.md',
+          'interview/listNode.md',
+          'interview/compare.md',
+          'interview/template.md',
+
+          // 'interview/treeNode.md',
+          // 'interview/recursion.md',
+          // 'interview/search.md',
         ]
       },
       {
-        title: "Dart",
+        title: 'Design',
         collapsable: true,
         children: [
-          'dart/emulators.md',
-          'dart/operator.md',
-          'dart/list.md',
-          'dart/set.md',
-          'dart/map.md',
-          'dart/function.md',
-          'dart/oop.md',
+          'design/singleton.md',
+          'design/eventEmitter.md',
+          'design/observable.md',
         ]
       },
+      // {
+      //   title: "Dart",
+      //   collapsable: true,
+      //   children: [
+      //     'dart/emulators.md',
+      //     'dart/operator.md',
+      //     'dart/list.md',
+      //     'dart/set.md',
+      //     'dart/map.md',
+      //     'dart/function.md',
+      //     'dart/oop.md',
+      //   ]
+      // },
       {
         title: "node",
         collapsable: true,

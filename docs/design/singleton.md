@@ -1,9 +1,8 @@
 # singleton 
-
 单例模式
 
-### Eager  饿汉单例模式
-```js
+```js{1}
+ // 饿汉单例模式
 class Eager {
   static instance = new Eager('eager')
   constructor(name) {
@@ -15,7 +14,8 @@ module.exports = { Eager }
 ```
 
 
-```js
+```js{1}
+// 懒汉单例模式
 class Lazy {
   static #instance = null;
   static getInstance() {

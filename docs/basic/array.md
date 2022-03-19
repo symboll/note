@@ -78,6 +78,20 @@ const sum2 = arr.myReduce((acc, cur, index, arr ) => {
 console.log('1',sum1)
 console.log('2',sum2)
 ```
+
+```js
+function compose(...funcs) {
+  if (funcs.length === 0) {
+    return (arg) => arg
+  }
+
+  if (funcs.length === 1) {
+    return funcs[0]
+  }
+
+  return funcs.reduce((a, b) => (...args) => a(b(...args)))
+}
+```
 ## methods
 ```js
 Array.from()                    

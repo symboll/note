@@ -36,9 +36,8 @@ Map.prototype.forEach()     // 遍历 Map 的所有成员。
 ```js
 map[Symbol.iterator] === map.entries   // true
 ```
-
+### Map => Array
 ```js
-// Map => Array
 const map = new Map([
   [1, 'one'],
   [2, 'two'],
@@ -57,6 +56,26 @@ const map = new Map([
 [...map]
 // [[1,'one'], [2, 'two'], [3, 'three']]
 ```
+
+### Map => object
+```js
+1. Object.fromEntries(map)
+
+2. const obj = Array.from(map).reduce((obj, [key, value]) =>
+  Object.assign(obj, { [key]: value} )
+, {})
+
+3. const obj = Array.from(map).reduce((obj, [key, value]) => {
+  obj[key] = value
+  return obj
+}, {})
+
+/// 性能最好
+4. const obj = [...map.entries()].reduce((obj, [key, value]) => (obj[key] = value, obj), {})
+
+5. const obj = Array.from(map.entries()).reduce((main, [key, value]) => ({...main, [key]: value}), {})
+```
+
 # WeakMap
 `WeakMap`结构与`Map`结构类似，也是用于生成键值对的集合。
 ```js
