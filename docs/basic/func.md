@@ -3,8 +3,7 @@
 
 #### utils
 ```js
-const basicType = ['string', 'number', 'boolean','undefined','null',
-'symbol', 'bigint']
+const basicType = ['string', 'number', 'boolean','undefined','null','symbol', 'bigint']
 const falseTypeArr = ['undefined','null']
 const dataType = any => Object.prototype.toString.call(any).slice(8,-1).toLowerCase()
 ```

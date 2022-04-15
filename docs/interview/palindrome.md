@@ -11,7 +11,6 @@ const vaildPalindrome = (str) => {
 
 ```js
 // 非空字符串 str。 返回该字符串中最长回文子串
-
 const LongestPalindrome = (str) => {
 
 }

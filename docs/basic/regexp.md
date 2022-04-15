@@ -101,7 +101,7 @@ pattern.exec(str)    // ['ab']
 
 const str = 'abcd'
 const pattern = /(ab)c/
-pattern.exec(str)     // ['abab', 'ab']
+pattern.exec(str)     // ['abc', 'ab']
 // 返回数组的第二项，是捕获性分组
 
 `非捕获性分组`
