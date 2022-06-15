@@ -53,8 +53,8 @@ module.exports = {
           'interview/listNode.md',
           'interview/compare.md',
           'interview/template.md',
+          'interview/customArrayfn.md',
           'interview/sort.md',
-
           // 'interview/treeNode.md',
           // 'interview/recursion.md',
           // 'interview/search.md',
