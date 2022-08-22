@@ -1,56 +1,4 @@
 # Array
-## interview
-### flatten [数组扁平化]
-```js
-const flatten = (arr, depth = Infinity) => {
-  return arr.flat(depth)
-}
-
-const flatten = (arr) => {
-  return [].concat(...arr.map(item => Array.isArray(item) ? flatten(item): item))
-}
-
-const flatten = (arr) => {
-  return arr.reduce((result, item) => 
-    result.concat(Array.isArray(item) ? flatten(item): item), [])
-}
-
-const flatten = (arr) => {
-  let newArr = []
-  while(arr.length) {
-    const last = arr.pop()
-    if(Array.isArray(last)) {
-      arr.push(...last)
-    }else {
-      newArr.unshift(last)
-    }
-  }
-  return newArr
-}
-```
-
-### unique [数组去重]
-```js
-const unique = (arr) => {
-  return new Set([...arr])
-}
-
-const unique = (arr) => {
-  const obj = {}
-  return arr.filter(item => {
-    return typeof item === 'object' && JSON.stringify(item) !== 'null' ?
-      ( obj.hasOwnProperty(Object.keys(item).sort().map(ele => `${ele}${item[ele]}`).join(''))?
-          false :
-          obj[Object.keys(item).sort().map(ele =>`${ele}${item[ele]}`).join('')] = true
-      ):
-      (
-        obj.hasOwnProperty(typeof item + item) ?
-        false: 
-        obj[typeof item + item] = true
-      )
-  })
-}
-```
 ### reduce 实现
 ```js
 Array.prototype.myReduce = function (callback, initialValue) {
@@ -79,19 +27,7 @@ console.log('1',sum1)
 console.log('2',sum2)
 ```
 
-```js
-function compose(...funcs) {
-  if (funcs.length === 0) {
-    return (arg) => arg
-  }
 
-  if (funcs.length === 1) {
-    return funcs[0]
-  }
-
-  return funcs.reduce((a, b) => (...args) => a(b(...args)))
-}
-```
 ## methods
 ```js
 Array.from()                    

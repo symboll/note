@@ -38,13 +38,17 @@ module.exports = {
         collapsable: true,
         children: [
           'utils/dataType.md',
+          'utils/flatten.md',
+          'utils/unique.md',
+          'utils/compose.md',
+          'utils/empty.md',
           'utils/debounce.md',
           'utils/deepClone.md',
           'utils/currying.md',
         ]
       },
       {
-        title: 'interview',
+        title: 'Interview',
         collapsable: true,
         children: [
           'interview/palindrome.md',
@@ -70,37 +74,23 @@ module.exports = {
         ]
       },
       // {
-      //   title: "Dart",
+      //   title: "Node",
       //   collapsable: true,
       //   children: [
-      //     'dart/emulators.md',
-      //     'dart/operator.md',
-      //     'dart/list.md',
-      //     'dart/set.md',
-      //     'dart/map.md',
-      //     'dart/function.md',
-      //     'dart/oop.md',
+      //     'node/fs.md',
       //   ]
       // },
       {
-        title: "node",
-        collapsable: true,
-        children: [
-          'node/fs.md',
-        ]
-      },
-      {
-        title: 'git',
+        title: 'Git',
         collapsable: true,
         children: [
           'git/basic.md'
         ]
       },
       {
-        title: 'source',
+        title: 'Source',
         collapsable: true,
         children: [
-          'sourceCode/react.md',
           'sourceCode/redux.md',
           'sourceCode/koa.md'
         ]

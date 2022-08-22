@@ -1,37 +1,34 @@
 # debounce & throttle
 
-### 防抖节流
-
 ```js
 // debounce 理解为最后一个人说了算
-function debounce (fn, delay) {
+function debounce(fn, delay) {
   let timer = null
-  return function () {
+  return function() {
     const arg = Array.from(arguments)
     const ctx = this
 
-    if(timer) {
+    if (timer) {
       clearTimerout(timer)
-    }else {
-      timer = setTimeout(()=> {
+    } else {
+      timer = setTimeout(() => {
         fn.apply(ctx, arg)
       }, delay)
     }
   }
 }
 
-
 // throttle 理解为 第一个人说了算
-function throttle (fn, interval) {
+function throttle(fn, interval) {
   let last = 0
 
-  return function () {
+  return function() {
     const ctx = this
-    const arg = Array.from(arguments) 
-    let now = + new Date()
-    if(now - last > interval) {
+    const arg = Array.from(arguments)
+    let now = +new Date()
+    if (now - last > interval) {
       last = now
-      fn.apply(ctx,arg)
+      fn.apply(ctx, arg)
     }
   }
 }

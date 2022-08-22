@@ -1,5 +1,4 @@
-# DataType
-### 类型判断
+# dataType
 
 ```js
 const dataType = (any) => {
