@@ -42,3 +42,14 @@ git branch -d xxxx
 ```Shell
 git remote -v
 ```
+
+### 可以放弃所有修改、新增、删除文件
+```Shell
+git checkout . && git clean -df
+```
+
+### 本次修改追加到上次commit上去
+```Shell
+git add .
+git commit --amend --no-edit
+```

@@ -1,32 +1,4 @@
 # String
-
-## interview
-### replace
-```js{1,2}
-// inpout  get-element-by-id
-// output  getElementById
-
-function localeUpperCase (str) {
-  const pattern = /-[a-zA-Z]/g
-  return str.replace(pattern, (match) => match.slice(1).toLocaleUpperCase())
-}
-```
-```js{1,2}
-// input: abc123def456
-// output: 123abc456def
-
-function exchange (str) {
-  const pattern = /([a-zA-Z]+)([1-9]+)/g
-  return str.replace(pattern, (match, p1, p2) => {
-    return `${p2}${p1}`
-  })
-}
-
-function exchange (str) {
-  const pattern = /([a-zA-Z]+)([1-9]+)/g
-  return str.replace(pattern, "$2$1");
-}
-```
 ## properties & methods
 ```js
 属性
@@ -164,6 +136,33 @@ str.replaceAll(regexp|substr, newSubstr|function)
 | offset | 匹配到的子字符串在原字符串中的偏移量。（比如，如果原字符串是 'abcd'，匹配到的子字符串是 'bc'，那么这个参数将会是 1）|   
 | string | 被匹配的原字符串。|   
 | NamedCaptureGroup | 命名捕获组匹配的对象 | 
+
+
+```js{1,2}
+// inpout  get-element-by-id
+// output  getElementById
+
+function localeUpperCase (str) {
+  const pattern = /-[a-zA-Z]/g
+  return str.replace(pattern, (match) => match.slice(1).toLocaleUpperCase())
+}
+```
+```js{1,2}
+// input: abc123def456
+// output: 123abc456def
+
+function exchange (str) {
+  const pattern = /([a-zA-Z]+)([1-9]+)/g
+  return str.replace(pattern, (match, p1, p2) => {
+    return `${p2}${p1}`
+  })
+}
+
+function exchange (str) {
+  const pattern = /([a-zA-Z]+)([1-9]+)/g
+  return str.replace(pattern, "$2$1");
+}
+```
 
 ### String.prototype.search()
 `search()` 方法执行正则表达式和 String 对象之间的一个搜索匹配。

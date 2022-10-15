@@ -10,7 +10,7 @@ module.exports = {
     sidebar: [
       {
         title: 'Basic',
-        collapsable: true,
+        collapsable: false,
         children: [
           'basic/string.md',
           'basic/regexp.md',
@@ -35,7 +35,7 @@ module.exports = {
       },
       {
         title: 'Utils',
-        collapsable: true,
+        collapsable: false,
         children: [
           'utils/dataType.md',
           'utils/flatten.md',
@@ -49,7 +49,7 @@ module.exports = {
       },
       {
         title: 'Interview',
-        collapsable: true,
+        collapsable: false,
         children: [
           'interview/palindrome.md',
           'interview/combination.md',
@@ -66,7 +66,7 @@ module.exports = {
       },
       {
         title: 'Design',
-        collapsable: true,
+        collapsable: false,
         children: [
           'design/singleton.md',
           'design/eventEmitter.md',
@@ -82,14 +82,21 @@ module.exports = {
       // },
       {
         title: 'Git',
-        collapsable: true,
+        collapsable: false,
         children: [
           'git/basic.md'
         ]
       },
       {
+        title: 'Npm',
+        collapsable: false,
+        children: [
+          'npm/version.md'
+        ]
+      },
+      {
         title: 'Source',
-        collapsable: true,
+        collapsable: false,
         children: [
           'sourceCode/redux.md',
           'sourceCode/koa.md'

@@ -1,3 +1,4 @@
+# version
 ### 一、版本号的位置及简述
 每个npm 包都有一个package.json文件，文件中的version 字段即为当前包的版本号。
 
