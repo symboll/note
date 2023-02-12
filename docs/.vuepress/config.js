@@ -12,13 +12,13 @@ module.exports = {
         title: 'Basic',
         collapsable: false,
         children: [
+          'basic/array.md',
+          'basic/object.md',
           'basic/string.md',
           'basic/regexp.md',
-          'basic/object.md',
-          'basic/array.md',
           'basic/func.md',
-          'basic/other.md',
           'basic/symbol.md',
+          'basic/other.md',
           'basic/promise.md',
           'basic/set.md',
           'basic/map.md',
@@ -27,10 +27,10 @@ module.exports = {
           'basic/class.md',
           'basic/math.md',
           'basic/date.md',
-          'basic/blob.md',
-          'basic/listNode.md',
-          'basic/stack.md',
-          'basic/queue.md',
+          // 'basic/blob.md',
+          // 'basic/listNode.md',
+          // 'basic/stack.md',
+          // 'basic/queue.md',
         ]
       },
       {
@@ -38,13 +38,13 @@ module.exports = {
         collapsable: false,
         children: [
           'utils/dataType.md',
+          'utils/compose.md',
+          'utils/currying.md',
           'utils/flatten.md',
           'utils/unique.md',
-          'utils/compose.md',
-          'utils/empty.md',
-          'utils/debounce.md',
           'utils/deepClone.md',
-          'utils/currying.md',
+          'utils/debounce.md',
+          'utils/sort.md',
         ]
       },
       {
@@ -58,21 +58,20 @@ module.exports = {
           'interview/compare.md',
           'interview/template.md',
           'interview/customArrayfn.md',
-          'interview/sort.md',
           // 'interview/treeNode.md',
           // 'interview/recursion.md',
           // 'interview/search.md',
         ]
       },
-      {
-        title: 'Design',
-        collapsable: false,
-        children: [
-          'design/singleton.md',
-          'design/eventEmitter.md',
-          'design/observable.md',
-        ]
-      },
+      // {
+      //   title: 'Design',
+      //   collapsable: false,
+      //   children: [
+      //     'design/singleton.md',
+      //     'design/eventEmitter.md',
+      //     'design/observable.md',
+      //   ]
+      // },
       // {
       //   title: "Node",
       //   collapsable: true,
@@ -95,20 +94,20 @@ module.exports = {
         ]
       },
       {
+        title: 'business_note',
+        collapsable: false,
+        children: [
+          'business_notes/commodity.md',
+        ]
+      },
+      {
         title: 'Source',
         collapsable: false,
         children: [
-          'sourceCode/redux.md',
-          'sourceCode/koa.md'
+          'sourcecode/redux.md',
+          'sourcecode/koa.md'
         ]
-      },
-      // {
-      //   title: 'business_note',
-      //   collapsable: true,
-      //   children: [
-      //     'business_notes/commodity.md',
-      //   ]
-      // }
+      }
     ]
   }
 }

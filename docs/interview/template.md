@@ -12,7 +12,7 @@ let obj = {
 }
 
 
-function render(templete, obj){
+function render(template, obj){
   const pattern = /{{\s*((\w+)?\.?(\[\d+\])?(\w+)?)+\s*}}/g
   return template.replaceAll(pattern, (match) => {
     const matchArr = match.replace('{{', '').replace('}}', '').trim().split('.')

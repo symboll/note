@@ -1,22 +1,33 @@
 # Object
-## methods
 ```js
+// 静态方法 - 判断
 Object.is()
+// 静态方法 - 创建
 Object.create()
+// 静态方法 - 复制
 Object.assign()
+// 静态属性 - 自身属性判断
+Object.hasOwn()
+// 静态方法 - 迭代转对象
+Object.fromEntries()
 
+// 静态方法 - 定义/修改属性 
 Object.defineProperty()
 Object.defineProperties()
 
+// 静态方法 - 对象原型
 Object.setPrototypeOf()
 Object.getPrototypeOf()
 
+// 静态方法 - 属性描述符
 Object.getOwnPropertyDescriptor()
 Object.getOwnPropertyDescriptors()
 
+// 静态方法 - 获取自身属性列表
 Object.getOwnPropertyNames()
 Object.getOwnPropertySymbols()
 
+// 静态方法 - 封闭/不可扩展/冻结
 Object.seal()
 Object.isSealed()
 Object.preventExtensions()
@@ -24,11 +35,12 @@ Object.isExtensible()
 Object.freeze()
 Object.isFrozen()
 
-Object.fromEntries()
+// 静态方法 - 迭代方法
 Object.keys()
 Object.entries()
 Object.values()
 
+// 实例方法
 Object.prototype.hasOwnProperty()
 Object.prototype.isPrototypeOf()
 Object.prototype.propertyIsEnumerable()
@@ -36,42 +48,42 @@ Object.prototype.toLocaleString()
 Object.prototype.toString()
 Object.prototype.valueOf()
 ```
-### Object.is
+## 静态方法 - 判断
 `Object.is()`方法判断两个值是否为同一个值。
 ```js
-Object.is(value1, value2)
-```
-`返回值:` Boolean
-#### Example
-```js
+// syntax
+Object.is(value1, value2)   // 返回值： Boolean
+
+// example
 Object.is(window.NaN, NaN)   // true
+window.NaN === NaN           // false
+
 Object.is(NaN, 0/0);         // true
+NaN === 0/0                  // false
 
 Object.is(0, -0);            // false
 0 === -0                     // true
 ```
-#### Object.is 与 == 运算不同。 
+> Object.is 与 == 运算不同。
 == 运算符在判断相等前对两边的变量(如果它们不是同一类型) 进行强制转换 (这种行为的结果会将 "" == false 判断为 true),
 而 Object.is不会强制转换两边的值。
 
-#### Object.is 与 === 运算也不相同。
+> Object.is 与 === 运算也不相同。
 === 运算符 (也包括 == 运算符) 将数字 -0 和 +0 视为相等 ，而将Number.NaN 与NaN视为不相等.
 
-### Object.create
+## 静态方法 - 创建
 `Object.create()`方法创建一个新对象，使用现有的对象来提供新创建的对象的__proto__。 
-```js
-Object.create(proto,[propertiesObject])
-```
-
-`proto:` 新创建对象的原型对象。 </br>
-`propertiesObject:`  可选。需要传入一个对象，该对象的属性类型参照`Object.defineProperties()`的第二个参数。如果该参数被指定且不为`undefined`，该传入对象的自有可枚举属性(即其自身定义的属性，而不是其原型链上的枚举属性)将为新创建的对象添加指定的属性值和对应的属性描述符。 </br>
-`返回值: ` 一个新对象，带着指定的原型对象和属性。</br>
 ::: danger 重点
 如果propertiesObject参数是 null 或非原始包装对象，则抛出一个 TypeError 异常
 :::
-
-#### Example
 ```js
+// syntax
+Object.create(proto,[propertiesObject])
+// proto: 新创建对象的原型对象。
+// propertiesObject:  可选。需要传入一个对象，该对象的属性类型参照`Object.defineProperties()`的第二个参数。如果该参数被指定且不为`undefined`，该传入对象的自有可枚举属性(即其自身定义的属性，而不是其原型链上的枚举属性)将为新创建的对象添加指定的属性值和对应的属性描述符。 
+// 返回值:  一个新对象，带着指定的原型对象和属性。
+
+// example
 let obj = {};
 // 以字面量方式创建的空对象就相当于:
 obj = Object.create(Object.prototype);
@@ -103,7 +115,7 @@ o2 = Object.create({}, {
   } 
 });
 ```
-#### 实现单继承
+### 实现单继承
 ```js
 function Parent(name) { this.name = name}
 Parent.prototype.say = function() {
@@ -119,7 +131,7 @@ Child.prototype.constructor = Child;
 const child = new Child('zhangsan');
 ```
 
-#### 实现多继承
+### 实现多继承
 ```js
 function Father (name){ this.name = name}
 function Mother (age) { this.age = age}
@@ -146,16 +158,16 @@ Child.prototype.run = function() {
 
 const child = new Child('zhangsan',18);
 ```
-### Object.assign
+## 静态方法 - 复制
 `Object.assign()` 方法用于将所有可枚举属性的值从一个或多个源对象分配到目标对象。它将返回目标对象。
 ```js
+// syntax
 Object.assign(target, ...sources)
-```
-`target:`目标对象。 <br />
-`sources:` 源对象。 <br />
-`返回值:`目标对象。
+// target:目标对象。 
+// sources: 源对象。
+// 返回值: 目标对象。
 
-```js
+// example
 const target = { a: 1, b: 2 };
 const source = { b: 4, c: 5 };
 
@@ -169,18 +181,18 @@ returnedTarget === target  // true
 ::: warning
 Object.assign 不会在那些source对象值为 null 或 undefined 的时候抛出错误。
 :::
-#### Example
-#### String类型和 Symbol 类型的属性都会被拷贝。
+
 ```js
+// example
+// String类型和 Symbol 类型的属性都会被拷贝。
 const o1 = { a: 1 };
 const o2 = { [Symbol('foo')]: 2 };
 
 const obj = Object.assign({}, o1, o2);
 console.log(obj);                  // { a : 1, [Symbol("foo")]: 2 } (cf. bug 1207182 on Firefox)
 Object.getOwnPropertySymbols(obj); // [Symbol(foo)]
-```
-#### 继承属性和不可枚举属性不能拷贝
-```js
+ 
+// 继承属性和不可枚举属性不能拷贝
 const obj = Object.create({foo: 1}, { // foo 是个继承属性。
   bar: {
     value: 2  // bar 是个不可枚举属性。
@@ -192,9 +204,8 @@ const obj = Object.create({foo: 1}, { // foo 是个继承属性。
 });
 const copy = Object.assign({}, obj);
 console.log(copy); // { baz: 3 }
-```
-#### 原始类型会被包装为对象
-```js
+
+// 原始类型会被包装为对象
 const v1 = "abc";
 const v2 = true;
 const v3 = 10;
@@ -203,9 +214,8 @@ const obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
 // 原始类型会被包装，null 和 undefined 会被忽略。
 // 注意，只有字符串的包装对象才可能有自身可枚举属性。
 console.log(obj); // { "0": "a", "1": "b", "2": "c" }
-```
-#### 异常会打断后续拷贝任务
-```js
+
+// 异常会打断后续拷贝任务
 const target = Object.defineProperty({}, "foo", {
     value: 1,
     writable: false
@@ -219,7 +229,7 @@ console.log(target.foo);  // 1，只读属性不能被覆盖，所以第二个�
 console.log(target.foo3); // undefined，异常之后 assign 方法就退出了，第三个属性是不会被拷贝到的。
 console.log(target.baz);  // undefined，第三个源对象更是不会被拷贝到的。
 ```
-#### 拷贝访问器
+####  拷贝访问器
 ```js
 const obj = {
   foo: 1,
@@ -255,7 +265,14 @@ copy = completeAssign({}, obj);
 console.log(copy);
 // { foo:1, get bar() { return 2 } }
 ```
-### Object.defineProperty & Object.defineProperties
+
+## 静态属性 - 自身属性判断
+`Object.hasOwn()`
+## 静态方法 - 迭代转对象
+`Object.fromEntries()`
+
+## 静态方法 - 定义/修改属性 
+`Object.defineProperty() && Object.defineProperties()`
 |           | defineProperty      | defineProperties  |
 | --------: |:---------------------:| :---------------------:|
 |   定义     | 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象。 | 方法直接在一个对象上定义新的属性或修改现有属性，并返回该对象。 |
@@ -323,11 +340,31 @@ Object.defineProperty(obj, "key", {
   value: "static"
 });
 ```
-### Object.setPrototypeOf & Object.getPrototypeOf
-### Object.getOwnPropertyDescriptor & Object.getOwnPropertyDescriptors
-### Object.getOwnPropertyNames & Object.getOwnPropertySymbols
-### Object.seal & Object.isSealed
-### Object.preventExtensions & Object.isExtensible
-### Object.freeze & Object.isFrozen
-### Object.fromEntries
-### Object.keys & Object.values & Object.entries
+
+## 静态方法 - 对象原型
+`Object.setPrototypeOf() && Object.getPrototypeOf()`
+
+## 静态方法 - 属性描述符
+`Object.getOwnPropertyDescriptor() && Object.getOwnPropertyDescriptors()`
+
+## 静态方法 - 获取自身属性列表
+`Object.getOwnPropertyNames()`
+`Object.getOwnPropertySymbols()`
+
+## 静态方法 - 封闭/不可扩展/冻结
+`Object.seal() && Object.isSealed()`
+`Object.preventExtensions() && Object.isExtensible()`
+`Object.freeze() && Object.isFrozen()`
+
+## 静态方法 - 迭代方法
+`Object.keys()`
+`Object.entries()`
+`Object.values()`
+
+## 实例方法
+`Object.prototype.hasOwnProperty()`
+`Object.prototype.isPrototypeOf()`
+`Object.prototype.propertyIsEnumerable()`
+`Object.prototype.toLocaleString()`
+`Object.prototype.toString()`
+`Object.prototype.valueOf()`

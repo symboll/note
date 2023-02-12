@@ -1,13 +1,22 @@
 # String
-## properties & methods
 ```js
-属性
-String length
-方法
+// 静态方法 
 String.raw()
 String.fromCharCode()
 String.fromCodePoint()
 
+// 实例属性
+String.prototype[@@iterator]()
+
+// 实例方法 - 查找
+String.prototype.at()
+String.prototype.charAt()
+String.prototype.charCodeAt()
+String.prototype.codePointAt()
+String.prototype.lastIndexOf()
+String.prototype.indexOf()
+
+// 实例方法 - 正则相关
 String.prototype.match()
 String.prototype.matchAll()
 String.prototype.replace()
@@ -15,49 +24,56 @@ String.prototype.replaceAll()
 String.prototype.search()
 String.prototype.split()
 
-String.prototype[@@iterator]()
-String.prototype.charAt()
-String.prototype.charCodeAt()
-String.prototype.codePointAt()
-
-String.prototype.includes()
-String.prototype.indexOf()
-String.prototype.lastIndexOf()
-
-String.prototype.localeCompare()
-String.prototype.normalize()
-String.prototype.repeat()
+// 实例方法 - 截取子串
 String.prototype.slice()
-String.prototype.concat()
 String.prototype.substring()
 
-String.prototype.padEnd()
-String.prototype.padStart()
-
+// 实例方法 - 判断子串 
 String.prototype.startsWith()
 String.prototype.endsWith()
+String.prototype.includes()
 
-String.prototype.toUpperCase()
+// 实例方法 - 补位
+String.prototype.padStart()
+String.prototype.padEnd()
+
+// 实例方法 - 转大小写
 String.prototype.toLowerCase()
+String.prototype.toUpperCase()
 String.prototype.toLocaleLowerCase()
 String.prototype.toLocaleUpperCase()
 
+// 实例方法 - 去空格
 String.prototype.trim()
 String.prototype.trimEnd()
 String.prototype.trimStart()
 
+// 实例方法 - 连接
+String.prototype.concat()
+// 实例方法 - 比较
+String.prototype.localeCompare()
+// 实例方法 - 规范化
+String.prototype.normalize()
+// 实例方法 - 重复
+String.prototype.repeat()
+
+// 实例方法 - 继承
 String.prototype.toString()
 String.prototype.valueOf()
 ```
-
-## 与RegExp相关
+## 静态方法 
+## 实例属性
+## 实例方法 - 查找
+## 实例方法 - 正则相关
+### 与RegExp相关
 :::danger 重点
 - String.prototype.match() 
 - String.prototype.matchAll() 
 - String.prototype.search()
 - 如果传入一个非正则表达式对象 regexp，则会使用 new RegExp(regexp) 隐式地将其转换为正则表达式对象。
 :::
-### String.prototype.match() & String.prototype.matchAll()
+
+### match() && matchAll()
 `match() `方法检索返回一个字符串匹配正则表达式的结果。<br/>
 `matchAll()`方法返回一个包含所有匹配正则表达式的结果及分组捕获组的迭代器。
 ```js{1,14}
@@ -103,7 +119,7 @@ str.match(pattern);
 //  ['test2', 'e', 'st2', '2', index: 5, input: 'test1test2', length: 4]
 // ]
 ```
-### String.prototype.replace() & String.prototype.replaceAll()
+###  replace() && replaceAll()
 `replace()` 方法返回一个由替换值`replacement`替换`部分`或`所有`的模式（pattern）匹配项后的`新字符串`。模式可以是一个字符串或者一个正则表达式，替换值可以是一个字符串或者一个每次匹配都要调用的回调函数。如果pattern是字符串，则仅替换第一个匹配项。<br/>
 `replaceAll()` 方法返回一个新字符串，新字符串`所有`满足 pattern 的部分都已被replacement 替换。pattern可以是一个字符串或一个 RegExp， replacement可以是一个字符串或一个在每次匹配被调用的函数。
 :::tip 区别
@@ -163,8 +179,7 @@ function exchange (str) {
   return str.replace(pattern, "$2$1");
 }
 ```
-
-### String.prototype.search()
+### search
 `search()` 方法执行正则表达式和 String 对象之间的一个搜索匹配。
 ```js{1}
 str.search(pattern)
@@ -175,7 +190,7 @@ str.search(pattern)
 - search()类似于正则表达式的 test() 方法。
 - 当要了解更多匹配信息时，可使用 match()（但会更慢一些），该方法类似于正则表达式的 exec() 方法。
 :::
-### String.prototype.split()
+### split
 `split()`方法使用指定的分隔符字符串将一个String对象分割成子字符串数组，以一个指定的分割字串来决定每个拆分的位置。 
 ```js
 str.split([separator[, limit]])
@@ -204,46 +219,9 @@ str.split('',4)  //  ["a", "b", "c", "d"]
 str.split('')    //  ["a", "b", "c", "d", "e", "f"]
 str.split()      //  ["abcdef"]
 ```
-
-## Rare Api
-### String.prototype.localeCompare()
-`localeCompare()`方法返回一个数字来指示一个参考字符串是否在排序顺序前面或之后或与给定字符串相同。<br/>
-当 引用字符串 在 比较字符串 前面时返回 `-1` <br/>
-当 引用字符串 在 比较字符串 后面时返回 `1 ` <br/>
-相同位置时返回` 0`
-```js
-referenceStr.localeCompare(compareString[, locales[, options]])
-
-// 新的 locales 、 options 参数能让应用程序定制函数的行为即指定用来排序的语言。 
-// locales 和 options 参数是依赖于具体实现的，在旧的实现中这两个参数是完全被忽略的。
-```
-```js
-'a'.localeCompare('c');   // -1  'a'是引用字符串， 'c'是比较字符串
-'d'.localeCompare('c');   // 1
-```
-
-### String.prototype.normalize()
-`normalize()` 方法会按照指定的一种 Unicode 正规形式将当前字符串正规化。（如果该值不是字符串，则首先将其转换为一个字符串）。
-```js
-str.normalize([form])
-```
-### String.prototype.repeat()
-`repeat() `构造并返回一个新字符串，该字符串包含被连接在一起的指定数量的字符串的副本。
-```js
-str.repeat(count)
-//count:  介于 0 和 +Infinity 之间的整数。表示在新构造的字符串中重复了多少遍原字符串。
-```
-```js
-"abc".repeat(-1)     // RangeError: repeat count must be positive and less than inifinity
-"abc".repeat(0)      // ""
-"abc".repeat(1)      // "abc"
-"abc".repeat(2)      // "abcabc"
-"abc".repeat(3.5)    // "abcabcabc" 参数count将会被自动转换成整数.
-"abc".repeat(1/0)    // RangeError:  repeat count must be positive and less than inifinity
-```
-
-### String.prototype.padStart() & String.prototype.padEnd()
-
+## 实例方法 - 截取子串
+## 实例方法 - 判断子串 
+### padstart & padEnd
 `padStart()`方法用另一个字符串填充当前字符串(如果需要的话，会重复多次)，以便产生的字符串达到给定的长度。从当前字符串的左侧开始填充。<br/>
 `padEnd()`  方法会用一个字符串填充当前字符串（如果需要的话则重复填充），返回填充后达到指定长度的字符串。从当前字符串的末尾（右侧）开始填充。
 ```js
@@ -268,3 +246,47 @@ str.padEnd(targetLength [, padString])
 'abc'.padEnd(6, "123456"); // "abc123"
 'abc'.padEnd(1);           // "abc"
 ```
+## 实例方法 - 补位
+## 实例方法 - 转大小写
+## 实例方法 - 去空格
+## 实例方法 - 连接
+## 实例方法 - 比较
+`localeCompare()`方法返回一个数字来指示一个参考字符串是否在排序顺序前面或之后或与给定字符串相同。<br/>
+当 引用字符串 在 比较字符串 前面时返回 `-1` <br/>
+当 引用字符串 在 比较字符串 后面时返回 `1 ` <br/>
+相同位置时返回` 0`
+```js
+referenceStr.localeCompare(compareString[, locales[, options]])
+
+// 新的 locales 、 options 参数能让应用程序定制函数的行为即指定用来排序的语言。 
+// locales 和 options 参数是依赖于具体实现的，在旧的实现中这两个参数是完全被忽略的。
+```
+```js
+'a'.localeCompare('c');   // -1  'a'是引用字符串， 'c'是比较字符串
+'d'.localeCompare('c');   // 1
+```
+## 实例方法 - 规范化
+`normalize()` 方法会按照指定的一种 Unicode 正规形式将当前字符串正规化。（如果该值不是字符串，则首先将其转换为一个字符串）。
+```js
+str.normalize([form])
+```
+## 实例方法 - 重复
+`repeat() `构造并返回一个新字符串，该字符串包含被连接在一起的指定数量的字符串的副本。
+```js
+str.repeat(count)
+//count:  介于 0 和 +Infinity 之间的整数。表示在新构造的字符串中重复了多少遍原字符串。
+```
+```js
+"abc".repeat(-1)     // RangeError: repeat count must be positive and less than inifinity
+"abc".repeat(0)      // ""
+"abc".repeat(1)      // "abc"
+"abc".repeat(2)      // "abcabc"
+"abc".repeat(3.5)    // "abcabcabc" 参数count将会被自动转换成整数.
+"abc".repeat(1/0)    // RangeError:  repeat count must be positive and less than inifinity
+```
+## 实例方法 - 继承
+
+
+
+
+

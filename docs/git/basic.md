@@ -5,26 +5,29 @@
 git clone <url>
 git init
 ```
-### 修改和提交
+### 提交修改
 ```Shell
 git status
 git diff
 git add .
 git commit -m 'feat: xxx'
+git push
 ```
-### 查看提交历史
+### 代码回滚 及同步远程仓库
 ```Shell
 git log
 q         // 退出
-
 git reset --hard xxxxxxxxx{commit id}
-git push -f   // 强推仓库代码回滚
+git push -force 
 ```
 
+### 合代码
 ```Shell
 git rebase --continue   
 git rebase --skip
 git rebase --abort
+
+git merge xxx
 ```
 
 ### 推分支名
@@ -48,8 +51,17 @@ git remote -v
 git checkout . && git clean -df
 ```
 
-### 本次修改追加到上次commit上去
+### 修改commit
 ```Shell
+//  本次修改追加到上次commit上去，不产生新的commit记录
 git add .
 git commit --amend --no-edit
+
+// 修改上次的commit记录，并同步远程仓库
+git log                                   //记录上次的commit id
+git rebase -i (commitId | HEAD~5 | --root)
+i                                         // 进入编辑状态
+change pick => edit
+git rebase --continue                    // 当出现 Successfully rebased and updated xxxx
+git push -force
 ```

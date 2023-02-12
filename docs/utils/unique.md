@@ -5,14 +5,12 @@ const unique = (arr) => new Set([...arr])
 
 const unique = (arr) => {
   const obj = {}
-
+  const basicTypeList = ["string", "number", "boolean", "undefined", "null"]
   const dataType = (any) =>
     Object.prototype.toString
       .call(any)
       .slice(8, -1)
       .toLocaleLowerCase()
-
-  const basicTypeList = ["string", "number", "boolean", "undefined", "null"]
 
   return arr
     .filter((item) => {
