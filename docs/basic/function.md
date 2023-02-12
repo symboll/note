@@ -1,5 +1,15 @@
-# Func
-### 函数
+# Function
+```js
+// 实例属性
+Function.prototype.length
+Function.prototype.name
+Function.prototype.prototype
+// 实例方法
+Function.prototype.apply()
+Function.prototype.bind()
+Function.prototype.call()
+Function.prototype.toString()
+```
 
 #### utils
 ```js

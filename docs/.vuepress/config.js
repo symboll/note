@@ -16,7 +16,7 @@ module.exports = {
           'basic/object.md',
           'basic/string.md',
           'basic/regexp.md',
-          'basic/func.md',
+          'basic/function.md',
           'basic/symbol.md',
           'basic/other.md',
           'basic/promise.md',
@@ -45,6 +45,7 @@ module.exports = {
           'utils/deepClone.md',
           'utils/debounce.md',
           'utils/sort.md',
+          'utils/numFormat.md'
         ]
       },
       {
