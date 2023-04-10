@@ -1,7 +1,7 @@
 # currying
 
 ```js{1}
-add(1)(2)(3)() = 6
+// add(1)(2)(3)() = 6
 
 function curry(fn) {
   let allArgs = []
@@ -40,9 +40,8 @@ function add() {
 }
 add.arr = []
 ```
-
 ```js{1,16,17,18}
-add(1)(2)(3) == 6 // true;
+// add(1)(2)(3) == 6 // true;
 
 function curry(fn) {
   let allArgs = []

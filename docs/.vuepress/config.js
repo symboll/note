@@ -38,14 +38,13 @@ module.exports = {
         collapsable: false,
         children: [
           'utils/dataType.md',
-          'utils/compose.md',
-          'utils/currying.md',
           'utils/flatten.md',
           'utils/unique.md',
+          'utils/compose.md',
+          'utils/currying.md',
           'utils/deepClone.md',
-          'utils/debounce.md',
           'utils/sort.md',
-          'utils/numFormat.md'
+          'utils/debounce.md'
         ]
       },
       {
@@ -59,6 +58,7 @@ module.exports = {
           'interview/compare.md',
           'interview/template.md',
           'interview/customArrayfn.md',
+          'interview/numFormat.md'
           // 'interview/treeNode.md',
           // 'interview/recursion.md',
           // 'interview/search.md',

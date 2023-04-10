@@ -8,8 +8,13 @@ Object.create()
 Object.assign()
 // 静态属性 - 自身属性判断
 Object.hasOwn()
+
 // 静态方法 - 迭代转对象
 Object.fromEntries()
+// 静态方法 - 迭代方法
+Object.keys()
+Object.entries()
+Object.values()
 
 // 静态方法 - 定义/修改属性 
 Object.defineProperty()
@@ -34,11 +39,6 @@ Object.preventExtensions()
 Object.isExtensible()
 Object.freeze()
 Object.isFrozen()
-
-// 静态方法 - 迭代方法
-Object.keys()
-Object.entries()
-Object.values()
 
 // 实例方法
 Object.prototype.hasOwnProperty()
@@ -268,8 +268,14 @@ console.log(copy);
 
 ## 静态属性 - 自身属性判断
 `Object.hasOwn()`
+
 ## 静态方法 - 迭代转对象
 `Object.fromEntries()`
+
+## 静态方法 - 迭代方法
+`Object.keys()`<br/>
+`Object.entries()`<br/>
+`Object.values()`
 
 ## 静态方法 - 定义/修改属性 
 `Object.defineProperty() && Object.defineProperties()`
@@ -348,23 +354,18 @@ Object.defineProperty(obj, "key", {
 `Object.getOwnPropertyDescriptor() && Object.getOwnPropertyDescriptors()`
 
 ## 静态方法 - 获取自身属性列表
-`Object.getOwnPropertyNames()`
+`Object.getOwnPropertyNames()`<br/>
 `Object.getOwnPropertySymbols()`
 
 ## 静态方法 - 封闭/不可扩展/冻结
-`Object.seal() && Object.isSealed()`
-`Object.preventExtensions() && Object.isExtensible()`
+`Object.seal() && Object.isSealed()`<br/>
+`Object.preventExtensions() && Object.isExtensible()`<br/>
 `Object.freeze() && Object.isFrozen()`
 
-## 静态方法 - 迭代方法
-`Object.keys()`
-`Object.entries()`
-`Object.values()`
-
 ## 实例方法
-`Object.prototype.hasOwnProperty()`
-`Object.prototype.isPrototypeOf()`
-`Object.prototype.propertyIsEnumerable()`
-`Object.prototype.toLocaleString()`
-`Object.prototype.toString()`
+`Object.prototype.hasOwnProperty()`<br/>
+`Object.prototype.isPrototypeOf()`<br/>
+`Object.prototype.propertyIsEnumerable()`<br/>
+`Object.prototype.toLocaleString()`<br/>
+`Object.prototype.toString()`<br/>
 `Object.prototype.valueOf()`

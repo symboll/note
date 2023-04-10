@@ -92,6 +92,10 @@ pattern.exec(str)     //  [ 'html' ]
 const str = 'ab'
 const pattern = /a|ab/
 pattern.exec(str)     //  ['a']
+
+const str = 'ac'
+const pattern = /(a|b)c/
+pattern.exec(str)     //  ['ac', 'a', index: 0, input: 'ac', groups: undefined]
 ```
 
 #### 分组 ()

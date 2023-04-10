@@ -1,11 +1,10 @@
 # ListNode
 ### 链表
 
-```js
+```js{2,4,32}
 // 滴滴面试题
-100个小孩 1,2,3报数。报到3的出列。求最后剩下的小孩编号。
-```
-```js
+// 100个小孩 1,2,3报数。报到3的出列。求最后剩下的小孩编号。
+
 // 面向对象编程
 function Link (val) {
   this.value = val
@@ -32,9 +31,8 @@ function find (total, num) {
   }
   return p
 }
-```
 
-```js
+
 // 面向过程解题
 function find (arr, num) {
   while(arr.length > num) {

@@ -15,16 +15,7 @@ dataType(null);                 // 'Null'
 dataType(new Promise(()=> {}))  // "Promise"
 ```
 
-```js
-const arr = []
-Array.isArray(arr)
-arr instanceof Array
-arr.constructor === Array
-Object.getPrototypeOf(arr) === Array.prototype
-Array.prototype.isPrototypeOf(arr)
-```
-
-####  基础数据类型
+###  基础数据类型
 ```js
 typeof any
 
@@ -55,4 +46,14 @@ typeof s // "symbol"
 // bigInt
 const b = 12n
 typeof b // "bigint"
+```
+
+### Array
+```js
+const list = []
+Array.isArray(list)
+list instanceof Array
+list.constructor === Array
+Object.getPrototypeOf(list) === Array.prototype
+Array.prototype.isPrototypeOf(list)
 ```

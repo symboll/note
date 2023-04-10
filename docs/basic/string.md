@@ -65,7 +65,6 @@ String.prototype.valueOf()
 ## 实例属性
 ## 实例方法 - 查找
 ## 实例方法 - 正则相关
-### 与RegExp相关
 :::danger 重点
 - String.prototype.match() 
 - String.prototype.matchAll() 
@@ -119,7 +118,7 @@ str.match(pattern);
 //  ['test2', 'e', 'st2', '2', index: 5, input: 'test1test2', length: 4]
 // ]
 ```
-###  replace() && replaceAll()
+### replace() && replaceAll()
 `replace()` 方法返回一个由替换值`replacement`替换`部分`或`所有`的模式（pattern）匹配项后的`新字符串`。模式可以是一个字符串或者一个正则表达式，替换值可以是一个字符串或者一个每次匹配都要调用的回调函数。如果pattern是字符串，则仅替换第一个匹配项。<br/>
 `replaceAll()` 方法返回一个新字符串，新字符串`所有`满足 pattern 的部分都已被replacement 替换。pattern可以是一个字符串或一个 RegExp， replacement可以是一个字符串或一个在每次匹配被调用的函数。
 :::tip 区别
@@ -221,6 +220,7 @@ str.split()      //  ["abcdef"]
 ```
 ## 实例方法 - 截取子串
 ## 实例方法 - 判断子串 
+## 实例方法 - 补位
 ### padstart & padEnd
 `padStart()`方法用另一个字符串填充当前字符串(如果需要的话，会重复多次)，以便产生的字符串达到给定的长度。从当前字符串的左侧开始填充。<br/>
 `padEnd()`  方法会用一个字符串填充当前字符串（如果需要的话则重复填充），返回填充后达到指定长度的字符串。从当前字符串的末尾（右侧）开始填充。
@@ -246,7 +246,6 @@ str.padEnd(targetLength [, padString])
 'abc'.padEnd(6, "123456"); // "abc123"
 'abc'.padEnd(1);           // "abc"
 ```
-## 实例方法 - 补位
 ## 实例方法 - 转大小写
 ## 实例方法 - 去空格
 ## 实例方法 - 连接

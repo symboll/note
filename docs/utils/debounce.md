@@ -1,6 +1,6 @@
 # debounce & throttle
 
-```js
+```js{1,18}
 // debounce 理解为最后一个人说了算
 function debounce(fn, delay) {
   let timer = null

@@ -164,7 +164,7 @@ console.log(Array.prototype[Symbol.unscopables])
 ```
 ### Array.prototype.length
 ## 实例方法 - 操作原数组
-### push,pop,unshift,shift
+### push(),pop(),unshift(),shift()
 ```js
 const arr = [1,2,3,4]
 arr.push('a','b','d')         // 在数组尾部添加元素，返回数组长度。 (对原数组操作)
@@ -311,7 +311,7 @@ f(1, 'a', true);
 ### concat()
 
 ## 实例方法 - 遍历方法
-### map() && every() && some() && forEach() && filter()
+### map(), every(), some(), forEach(), filter()
 
 ### reduce() && reduceRight()
 ```js
