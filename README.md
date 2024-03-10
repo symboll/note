@@ -19,5 +19,5 @@ npm install
 安装依赖后运行电子书：
 
 ```bash
-npm run dev
+npm run docs:dev
 ```

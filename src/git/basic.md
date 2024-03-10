@@ -63,5 +63,5 @@ git rebase -i (commitId | HEAD~5 | --root)
 i                                         // 进入编辑状态
 change pick => edit
 git rebase --continue                    // 当出现 Successfully rebased and updated xxxx
-git push -force
+git push --force
 ```

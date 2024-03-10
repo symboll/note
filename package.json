@@ -1,16 +1,10 @@
 {
-  "name": "note",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
   },
-  "keywords": [],
-  "author": "symbollee",
-  "license": "ISC",
-  "devDependencies": {
-    "vuepress": "^1.7.1"
+  "dependencies": {
+    "vitepress": "^1.0.0-rc.36"
   }
 }

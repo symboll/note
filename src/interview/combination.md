@@ -1,7 +1,7 @@
 # combination
 ### 排列组合
 
-<img :src="$withBase('/combination.png')" alt="combination">
+![An image](./combination.png)
 
 ```js
 // n = 6, m = 2
