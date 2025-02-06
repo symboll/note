@@ -59,6 +59,14 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Design',
+        items: [
+          { text: 'Singleton', link: '/src/design/singleton.md' },
+          { text: 'EventEmitter', link: '/src/design/eventEmitter.md' },
+          { text: 'Observable', link: '/src/design/observable.md' },
+        ]
+      },
+      {
         text: 'Git',
         items: [
           { text: 'Baisc', link: '/src/git/basic.md' }

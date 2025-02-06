@@ -1,4 +1,4 @@
-# singleton 
+# Singleton 
 单例模式
 
 ```js{1}
@@ -10,14 +10,13 @@ class Eager {
     this.name = name
   }
 }
-module.exports = { Eager }
 ```
 
 
 ```js{1}
 // 懒汉单例模式
 class Lazy {
-  static #instance = null;
+  static #instance = null;      // 私有属性
   static getInstance() {
     if (!Lazy.instance) {
       Lazy.instace = new Lazy('lazy')
@@ -29,5 +28,4 @@ class Lazy {
     this.name = name
   }
 }
-module.exports = { Lazy }
 ```

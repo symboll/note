@@ -62,6 +62,7 @@ git log                                   //记录上次的commit id
 git rebase -i (commitId | HEAD~5 | --root)
 i                                         // 进入编辑状态
 change pick => edit
+git commit --amend                       //  更新 commit 记录
 git rebase --continue                    // 当出现 Successfully rebased and updated xxxx
 git push --force
 ```

@@ -4,7 +4,8 @@
 get Array[@@species]
 
 // 静态方法
-Array.from()                    
+Array.from()               
+Array.fromAsync()     
 Array.isArray()                 
 Array.of()          
 
@@ -96,6 +97,42 @@ const range = (start, stop, step) =>  Array.from(
 range(0, 4, 1);                                     // [0, 1, 2, 3, 4] 
 range(1, 10, 2);                                    // [1, 3, 5, 7, 9]
 ```
+### Array.fromAsync()
+`Array.fromAsync()` 静态方法可以由一个异步可迭代对象、可迭代对象或类数组对象创建一个**新的、浅拷贝的 Array实例**。
+```js
+// syntax
+Array.fromAsync(arrayLike, mapFn?, thisArg?)
+// example
+// 从产生 promise 的同步可迭代对象创建数组
+Array.fromAsync(
+  new Set([Promise.resolve(1), Promise.resolve(2), Promise.resolve(3)]),
+).then((array) => console.log(array));
+// [1, 2, 3]
+```
+##### compare
+```js
+与 Promise.all() 的比较
+Array.fromAsync() 会依次等待对象中产生的每个值兑现。Promise.all() 会并行等待所有值兑现。
+
+function* makeAsyncIterable() {
+  for (let i = 0; i < 5; i++) {
+    yield new Promise((resolve) => setTimeout(resolve, 100));
+  }
+}
+
+(async () => {
+  console.time("Array.fromAsync() time");
+  await Array.fromAsync(makeAsyncIterable());
+  console.timeEnd("Array.fromAsync() time");
+  // Array.fromAsync() time: 503.610ms
+
+  console.time("Promise.all() time");
+  await Promise.all(makeAsyncIterable());
+  console.timeEnd("Promise.all() time");
+  // Promise.all() time: 101.728ms
+})();
+```
+
 
 ### Array.isArray()
 `Array.isArray()`用于确定传递的值是否是一个 Array。 返回值: `Boolean`

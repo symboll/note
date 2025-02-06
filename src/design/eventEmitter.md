@@ -1,4 +1,4 @@
-# eventEmitter 
+# EventEmitter 
 
 观察者模式
 
